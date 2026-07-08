@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "About",
+    "about": "Profile",
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
@@ -17,11 +17,18 @@
     "role": "Analyst",
     "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
     "bio": "Master's graduate in Economics and Business with strong analytical skills and a keen interest in digital transformation.",
+    "bio_extended": "Graduated in Economics and Business, with experience in econometric analysis, ARIMA modeling and data visualization. I combine analytical rigor and quantitative skills to turn data into strategic decisions.",
+    "feat1_title": "Data Analysis & Econometrics",
+    "feat1_desc": "ARIMA models, regressions, forecasting and machine learning.",
+    "feat2_title": "Business Intelligence",
+    "feat2_desc": "Interactive dashboards, insights and decision support.",
+    "feat3_title": "Data Driven",
+    "feat3_desc": "I turn data into concrete value for companies and professionals.",
     "cta_cv": "Download CV",
     "cta_projects": "View Projects"
   },
   "about": {
-    "title": "About Me",
+    "title": "Professional Profile",
     "p1": "I'm Antonio Fortunato, an Analyst with a strong academic background in Economics and Business (110/110 with honors). I combine business expertise with a technology-driven, analytical mindset.",
     "p2": "I have experience in data analysis, decision-making support, and leveraging technology to improve operational efficiency. During my internship at Diskover Srl, I designed and developed SYRIAS — a web application for time series forecasting based on ARIMA models.",
     "p3": "I'm driven by digital transformation and the ability to extract value from data to support strategic decisions."

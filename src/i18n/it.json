@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "Chi sono",
+    "about": "Profilo",
     "experience": "Esperienza",
     "education": "Formazione",
     "skills": "Skills",
@@ -17,11 +17,18 @@
     "role": "Analyst",
     "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
     "bio": "Laureato magistrale in Economia e Commercio con solide competenze economico-aziendali, capacità analitiche e forte interesse per la trasformazione digitale.",
+    "bio_extended": "Laureato in Economia e Commercio, con esperienza in analisi econometriche, modellazione ARIMA e visualizzazione dati. Combino rigore analitico e competenze quantitative per trasformare i dati in decisioni strategiche.",
+    "feat1_title": "Analisi Dati & Econometria",
+    "feat1_desc": "Modelli ARIMA, regressioni, forecast e machine learning.",
+    "feat2_title": "Business Intelligence",
+    "feat2_desc": "Dashboard interattive, insight e supporto decisionale.",
+    "feat3_title": "Data Driven",
+    "feat3_desc": "Trasformo i dati in valore concreto per aziende e professionisti.",
     "cta_cv": "Scarica CV",
     "cta_projects": "Vedi Progetti"
   },
   "about": {
-    "title": "Chi sono",
+    "title": "Profilo Professionale",
     "p1": "Sono Antonio Fortunato, Analyst con una solida formazione accademica in Economia e Commercio (110/110 con lode). Combino competenze economico-aziendali con un forte orientamento tecnologico e analitico.",
     "p2": "Ho esperienza nell'analisi dei dati, nel supporto ai processi decisionali e nell'utilizzo di tecnologie per migliorare l'efficienza operativa. Durante il mio internship presso Diskover Srl ho progettato e sviluppato SYRIAS, una web application per il forecasting di serie temporali basata su modelli ARIMA.",
     "p3": "Sono motivato dalla trasformazione digitale e dalla capacità di estrarre valore dai dati per supportare decisioni strategiche."

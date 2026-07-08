@@ -1,6 +1,36 @@
 import { useTranslation } from 'react-i18next'
 import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
+const FEATURES = [
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+      </svg>
+    ),
+    titleKey: 'hero.feat1_title',
+    descKey: 'hero.feat1_desc',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
+    titleKey: 'hero.feat2_title',
+    descKey: 'hero.feat2_desc',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+      </svg>
+    ),
+    titleKey: 'hero.feat3_title',
+    descKey: 'hero.feat3_desc',
+  },
+]
+
 export default function Hero() {
   const { t } = useTranslation()
   const textRef = useIntersectionObserver({ threshold: 0.05 })
@@ -10,73 +40,77 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Sfondo immagine */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/portfolio/fotosfondo.webp')" }}
+        style={{ backgroundImage: "url('/portfolio/fotosfo.webp')" }}
         aria-hidden="true"
       />
 
-      {/* Overlay scuro con gradiente — come il riferimento */}
+      {/* Dark overlay — stronger on left for text readability */}
       <div
         className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(to right, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.45) 75%, rgba(0,0,0,0.2) 100%)',
-        }}
+        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.88) 40%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.25) 100%)' }}
         aria-hidden="true"
       />
 
-      {/* Contenuto */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-24 pb-20">
-        <div ref={textRef} className="fade-up max-w-2xl">
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-24 pb-16">
+        <div ref={textRef} className="fade-up max-w-xl">
 
-          {/* Badge piccolo come il riferimento */}
-          <div className="inline-flex items-center gap-2 border border-gold-500/50 text-gold-400 text-xs font-semibold uppercase tracking-[0.2em] px-4 py-1.5 rounded-sm mb-8">
-            <span>✦</span>
-            {t('hero.badge')}
-          </div>
-
-          {/* Nome grande — prima riga bianca, seconda gialla */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-none mb-6">
-            <span className="text-white block">{t('hero.firstname')}</span>
-            <span className="text-gold-400 block italic">{t('hero.lastname')}</span>
+          {/* Nome grande — bianco + giallo italic */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] mb-5">
+            <span className="text-white block">Antonio</span>
+            <span className="text-gold-400 block italic">Fortunato</span>
           </h1>
 
-          {/* Ruolo */}
-          <p className="text-lg sm:text-xl font-semibold text-muted-300 mb-4 uppercase tracking-widest">
-            {t('hero.role')}
-          </p>
-
-          {/* Typewriter */}
-          <div className="mb-6">
-            <p className="typewriter text-sm sm:text-base text-gold-300 font-medium inline-block">
-              {t('hero.typewriter')}
-            </p>
+          {/* Ruoli in badge */}
+          <div className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7">
+            <span>Economista</span>
+            <span className="text-white/30 mx-1">|</span>
+            <span>Data Analyst</span>
+            <span className="text-white/30 mx-1">|</span>
+            <span>Quantitative Thinker</span>
           </div>
 
           {/* Bio */}
-          <p className="text-muted-300 text-sm sm:text-base leading-relaxed max-w-lg mb-10">
-            {t('hero.bio')}
+          <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10">
+            {t('hero.bio_extended')}
           </p>
 
+          {/* 3 Feature cards */}
+          <div className="space-y-4">
+            {FEATURES.map((f, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-sm border border-gold-500/50 bg-dark-800/80 flex items-center justify-center text-gold-400 flex-shrink-0">
+                  {f.icon}
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-sm mb-0.5">{t(f.titleKey)}</h3>
+                  <p className="text-muted-400 text-xs leading-relaxed">{t(f.descKey)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* CTA */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mt-10">
             <a
               href="/portfolio/antonio_fortunato_cv.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
             >
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
               </svg>
               {t('hero.cta_cv')}
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white text-sm font-bold rounded-sm border border-white/40 hover:border-gold-400 hover:text-gold-400 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
             >
               {t('hero.cta_projects')}
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
@@ -85,9 +119,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Freccia scroll in basso */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/30 animate-bounce">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
