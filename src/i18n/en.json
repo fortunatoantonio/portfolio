@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Antonio Fortunato",
+    "role": "Analyst",
+    "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
+    "bio": "Master's graduate in Economics and Business with strong analytical skills and a keen interest in digital transformation.",
+    "cta_cv": "Download CV",
+    "cta_projects": "View Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I'm Antonio Fortunato, an Analyst with a strong academic background in Economics and Business (110/110 with honors). I combine business expertise with a technology-driven, analytical mindset.",
+    "p2": "I have experience in data analysis, decision-making support, and leveraging technology to improve operational efficiency. During my internship at Diskover Srl, I designed and developed SYRIAS — a web application for time series forecasting based on ARIMA models.",
+    "p3": "I'm driven by digital transformation and the ability to extract value from data to support strategic decisions."
+  },
+  "skills": {
+    "title": "Skills",
+    "soft_title": "Soft Skills",
+    "business_title": "Business Analysis",
+    "tools_title": "Tools",
+    "soft": ["Analytical Mindset", "Problem Solving", "Learning Agility", "Team Working", "Data Storytelling"],
+    "business": ["Process Analysis", "Requirements Gathering", "KPI Monitoring", "Reporting", "Decision Support"],
+    "tools": ["Excel", "Python", "R", "Flask", "ARIMA / Time Series", "GitHub"]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "role": "Internship — Data Analyst",
+        "company": "Diskover Srl",
+        "location": "Pescara",
+        "period": "October 2025 – December 2025",
+        "description": "Study and presentation of the Flask framework. Design and development of SYRIAS: a web application for time series forecasting based on ARIMA models."
+      },
+      {
+        "role": "Internship — Accounting & Marketing",
+        "company": "Pro Loco Tourist Association",
+        "location": "Manfredonia",
+        "period": "October 2022 – December 2022",
+        "description": "Administrative, communication and digital marketing activities for the local tourism association."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "degree": "Master's Degree in Economics and Business",
+        "institution": "University of Chieti-Pescara",
+        "period": "November 2023 – March 2026",
+        "grade": "110/110 with honors",
+        "note": "Project works and thesis repository"
+      },
+      {
+        "degree": "Bachelor's Degree in Business Administration",
+        "institution": "University of Foggia",
+        "period": "November 2019 – October 2023",
+        "grade": "97/110",
+        "note": ""
+      },
+      {
+        "degree": "Technical Economic Diploma",
+        "institution": "I.T.E. G. Toniolo",
+        "period": "September 2014 – July 2019",
+        "grade": "80/100",
+        "note": "Manfredonia"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "view_github": "View on GitHub",
+    "items": [
+      {
+        "name": "SYRIAS",
+        "description": "Web application for time series forecasting based on ARIMA models, built with Flask.",
+        "lang": "Python / Flask",
+        "url": "https://github.com/fortunatoantonio/SYRIAS"
+      },
+      {
+        "name": "Forecast FTSE",
+        "description": "Forecasting model for the FTSE MIB index with time series analysis and statistical validation.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio/forecast-ftse"
+      },
+      {
+        "name": "Time Series - Statistical Regression",
+        "description": "Advanced statistical analysis with regression on economic-financial time series.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
+      },
+      {
+        "name": "Flask Presentation",
+        "description": "Interactive presentation of the Flask framework for Python web applications.",
+        "lang": "HTML",
+        "url": "https://github.com/fortunatoantonio/presentazione-flask"
+      },
+      {
+        "name": "Data Analysis Portfolio",
+        "description": "Collection of notebooks and scripts for exploratory data analysis with Python.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio"
+      },
+      {
+        "name": "Business Dashboard",
+        "description": "Dashboard for monitoring business KPIs with interactive visualizations.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio"
+      },
+      {
+        "name": "Thesis Repository",
+        "description": "Repository dedicated to the master's thesis project with code and documentation.",
+        "lang": "Python / R",
+        "url": "https://github.com/fortunatoantonio"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "issued_by": "Issued by",
+    "items": [
+      {
+        "name": "Digital Skills for Marketing",
+        "issuer": "Accenture (MOOC)",
+        "description": "Digital skills applied to marketing: SEO, social media strategy, digital advertising and performance analytics."
+      },
+      {
+        "name": "Digital Skills for Work",
+        "issuer": "Accenture (MOOC)",
+        "description": "Digital skills for the workplace: productivity, digital collaboration, cloud tools and cybersecurity."
+      },
+      {
+        "name": "Digital Skills for Social Media",
+        "issuer": "Accenture (MOOC)",
+        "description": "Strategies and techniques for professional management of corporate social media and personal branding."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "I'm available for job opportunities, collaborations, or just a chat.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "message_label": "Message",
+    "message_placeholder": "Write your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Send error. Please try again or contact me directly via email.",
+    "or_reach": "Or reach me directly"
+  },
+  "footer": {
+    "built_with": "Built with React + Vite + Tailwind",
+    "rights": "All rights reserved."
+  }
+}

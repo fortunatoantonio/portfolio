@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "experience": "Esperienza",
+    "education": "Formazione",
+    "skills": "Skills",
+    "projects": "Progetti",
+    "certifications": "Certificazioni",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "greeting": "Ciao, sono",
+    "name": "Antonio Fortunato",
+    "role": "Analyst",
+    "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
+    "bio": "Laureato magistrale in Economia e Commercio con solide competenze economico-aziendali, capacità analitiche e forte interesse per la trasformazione digitale.",
+    "cta_cv": "Scarica CV",
+    "cta_projects": "Vedi Progetti"
+  },
+  "about": {
+    "title": "Chi sono",
+    "p1": "Sono Antonio Fortunato, Analyst con una solida formazione accademica in Economia e Commercio (110/110 con lode). Combino competenze economico-aziendali con un forte orientamento tecnologico e analitico.",
+    "p2": "Ho esperienza nell'analisi dei dati, nel supporto ai processi decisionali e nell'utilizzo di tecnologie per migliorare l'efficienza operativa. Durante il mio internship presso Diskover Srl ho progettato e sviluppato SYRIAS, una web application per il forecasting di serie temporali basata su modelli ARIMA.",
+    "p3": "Sono motivato dalla trasformazione digitale e dalla capacità di estrarre valore dai dati per supportare decisioni strategiche."
+  },
+  "skills": {
+    "title": "Skills",
+    "soft_title": "Soft Skills",
+    "business_title": "Business Analysis",
+    "tools_title": "Strumenti",
+    "soft": ["Analytical Mindset", "Problem Solving", "Learning Agility", "Team Working", "Data Storytelling"],
+    "business": ["Process Analysis", "Requirements Gathering", "KPI Monitoring", "Reporting", "Decision Support"],
+    "tools": ["Excel", "Python", "R", "Flask", "ARIMA / Time Series", "GitHub"]
+  },
+  "experience": {
+    "title": "Esperienza",
+    "items": [
+      {
+        "role": "Internship — Data Analyst",
+        "company": "Diskover Srl",
+        "location": "Pescara",
+        "period": "Ottobre 2025 – Dicembre 2025",
+        "description": "Studio e presentazione del framework Flask. Progettazione e sviluppo di SYRIAS: una web application per il forecasting di serie temporali basata sui modelli ARIMA."
+      },
+      {
+        "role": "Internship — Accounting & Marketing",
+        "company": "Associazione Turistica Pro Loco",
+        "location": "Manfredonia",
+        "period": "Ottobre 2022 – Dicembre 2022",
+        "description": "Attività amministrative, di comunicazione e di digital marketing per l'associazione turistica locale."
+      }
+    ]
+  },
+  "education": {
+    "title": "Formazione",
+    "items": [
+      {
+        "degree": "Laurea Magistrale in Economia e Commercio",
+        "institution": "Università degli Studi Chieti-Pescara",
+        "period": "Novembre 2023 – Marzo 2026",
+        "grade": "110/110 con lode",
+        "note": "Project works e repository tesi"
+      },
+      {
+        "degree": "Laurea Triennale in Economia Aziendale",
+        "institution": "Università degli Studi di Foggia",
+        "period": "Novembre 2019 – Ottobre 2023",
+        "grade": "97/110",
+        "note": ""
+      },
+      {
+        "degree": "Diploma Tecnico Economico",
+        "institution": "I.T.E. G. Toniolo",
+        "period": "Settembre 2014 – Luglio 2019",
+        "grade": "80/100",
+        "note": "Manfredonia"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Progetti",
+    "view_github": "Vedi su GitHub",
+    "items": [
+      {
+        "name": "SYRIAS",
+        "description": "Web application per il forecasting di serie temporali basata su modelli ARIMA, sviluppata con Flask.",
+        "lang": "Python / Flask",
+        "url": "https://github.com/fortunatoantonio/SYRIAS"
+      },
+      {
+        "name": "Forecast FTSE",
+        "description": "Modello di previsione per l'indice FTSE MIB con analisi di serie temporali e validazione statistica.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio/forecast-ftse"
+      },
+      {
+        "name": "Time Series - Statistical Regression",
+        "description": "Analisi statistica avanzata con regressione su serie temporali economico-finanziarie.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
+      },
+      {
+        "name": "Presentazione Flask",
+        "description": "Presentazione interattiva del framework Flask per applicazioni web in Python.",
+        "lang": "HTML",
+        "url": "https://github.com/fortunatoantonio/presentazione-flask"
+      },
+      {
+        "name": "Data Analysis Portfolio",
+        "description": "Raccolta di notebook e script per l'analisi esplorativa dei dati con Python.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio"
+      },
+      {
+        "name": "Business Dashboard",
+        "description": "Dashboard per il monitoraggio dei KPI aziendali con visualizzazioni interattive.",
+        "lang": "Python",
+        "url": "https://github.com/fortunatoantonio"
+      },
+      {
+        "name": "Tesi Repository",
+        "description": "Repository dedicato al progetto di tesi magistrale con codice e documentazione.",
+        "lang": "Python / R",
+        "url": "https://github.com/fortunatoantonio"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certificazioni",
+    "issued_by": "Rilasciata da",
+    "items": [
+      {
+        "name": "Digital Skills for Marketing",
+        "issuer": "Accenture (MOOC)",
+        "description": "Competenze digitali applicate al marketing: SEO, social media strategy, digital advertising e analisi delle performance."
+      },
+      {
+        "name": "Digital Skills for Work",
+        "issuer": "Accenture (MOOC)",
+        "description": "Competenze digitali per il mondo del lavoro: produttività, collaborazione digitale, strumenti cloud e sicurezza informatica."
+      },
+      {
+        "name": "Digital Skills for Social Media",
+        "issuer": "Accenture (MOOC)",
+        "description": "Strategie e tecniche per la gestione professionale dei social media aziendali e personal branding."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "Sono disponibile per opportunità professionali, collaborazioni o semplicemente per fare una chiacchierata.",
+    "name_label": "Nome",
+    "name_placeholder": "Il tuo nome",
+    "email_label": "Email",
+    "email_placeholder": "la.tua@email.com",
+    "message_label": "Messaggio",
+    "message_placeholder": "Scrivi il tuo messaggio...",
+    "send": "Invia Messaggio",
+    "sending": "Invio in corso...",
+    "success": "Messaggio inviato con successo! Ti risponderò presto.",
+    "error": "Errore nell'invio. Riprova o contattami direttamente via email.",
+    "or_reach": "Oppure contattami direttamente"
+  },
+  "footer": {
+    "built_with": "Fatto con React + Vite + Tailwind",
+    "rights": "Tutti i diritti riservati."
+  }
+}

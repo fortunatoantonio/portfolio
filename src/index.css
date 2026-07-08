@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ── Custom theme tokens ── */
+@theme {
+  --color-navy-900: #0f1b3d;
+  --color-navy-800: #1a2c5b;
+  --color-navy-700: #243878;
+  --color-navy-600: #2e4595;
+  --color-navy-500: #3852b2;
+  --color-indigo-400: #6272d8;
+  --color-indigo-300: #8e9de6;
+  --color-indigo-100: #e8ebfa;
+  --color-slate-50: #f8f9fc;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #f8f9fc;
+  color: #1a2c5b;
+}
+
+/* ── Scroll-driven animations ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Typewriter effect ── */
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #3852b2;
+  width: 0;
+  animation:
+    typing 2.2s steps(30, end) 0.5s forwards,
+    blink 0.75s step-end infinite;
+}
+
+/* ── Timeline ── */
+.timeline-line {
+  position: absolute;
+  left: 1.25rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #3852b2, #e8ebfa);
+}
+
+/* ── Section spacing ── */
+section {
+  scroll-margin-top: 72px;
+}
