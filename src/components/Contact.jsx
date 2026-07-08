@@ -88,6 +88,14 @@ export default function Contact() {
     setErrors({})
     setStatus('sending')
 
+    // Blocca invii da origini non autorizzate (protezione lato client)
+    const allowed = ['fortunatoantonio.github.io', 'localhost']
+    const host = window.location.hostname
+    if (!allowed.some((h) => host === h || host.endsWith(h))) {
+      setStatus('error')
+      return
+    }
+
     try {
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
