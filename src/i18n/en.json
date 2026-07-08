@@ -6,6 +6,7 @@
     "skills": "Skills",
     "projects": "Projects",
     "certifications": "Certifications",
+    "languages": "Languages",
     "contact": "Contact"
   },
   "hero": {
@@ -43,7 +44,7 @@
     "tools": ["Excel", "Python", "R", "Flask", "ARIMA / Time Series", "GitHub"]
   },
   "experience": {
-    "title": "Experience",
+    "title": "Work Experience",
     "items": [
       {
         "role": "Internship — Data Analyst",
@@ -88,7 +89,7 @@
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "University Projects",
     "view_github": "View on GitHub",
     "items": [
       {
@@ -148,6 +149,14 @@
         "issuer": "Accenture (MOOC)",
         "description": "Strategies and techniques for professional management of corporate social media and personal branding."
       }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "eyebrow": "Language skills",
+    "items": [
+      { "name": "Italian", "level": "Native", "percent": 100 },
+      { "name": "English", "level": "Intermediate (B1)", "percent": 55 }
     ]
   },
   "contact": {

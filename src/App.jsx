@@ -6,6 +6,7 @@ import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Certifications from './components/Certifications'
+import Languages from './components/Languages'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -13,12 +14,14 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <Hero />        <About />
+        <Hero />
+        <About />
         <Experience />
         <Education />
         <Skills />
         <Projects />
         <Certifications />
+        <Languages />
       </main>
       <Footer />
     </>

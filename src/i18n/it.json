@@ -1,11 +1,12 @@
 {
   "nav": {
     "about": "Profilo",
-    "experience": "Esperienza",
-    "education": "Formazione",
+    "experience": "Esperienze",
+    "education": "Istruzione",
     "skills": "Skills",
     "projects": "Progetti",
     "certifications": "Certificazioni",
+    "languages": "Lingue",
     "contact": "Contatti"
   },
   "hero": {
@@ -43,7 +44,7 @@
     "tools": ["Excel", "Python", "R", "Flask", "ARIMA / Time Series", "GitHub"]
   },
   "experience": {
-    "title": "Esperienza",
+    "title": "Esperienze Lavorative",
     "items": [
       {
         "role": "Internship — Data Analyst",
@@ -62,7 +63,7 @@
     ]
   },
   "education": {
-    "title": "Formazione",
+    "title": "Istruzione",
     "items": [
       {
         "degree": "Laurea Magistrale in Economia e Commercio",
@@ -88,7 +89,7 @@
     ]
   },
   "projects": {
-    "title": "Progetti",
+    "title": "Progetti Universitari",
     "view_github": "Vedi su GitHub",
     "items": [
       {
@@ -148,6 +149,14 @@
         "issuer": "Accenture (MOOC)",
         "description": "Strategie e tecniche per la gestione professionale dei social media aziendali e personal branding."
       }
+    ]
+  },
+  "languages": {
+    "title": "Lingue",
+    "eyebrow": "Competenze linguistiche",
+    "items": [
+      { "name": "Italiano", "level": "Madrelingua", "percent": 100 },
+      { "name": "Inglese", "level": "Intermedio (B1)", "percent": 55 }
     ]
   },
   "contact": {

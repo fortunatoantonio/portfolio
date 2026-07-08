@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageToggle from './LanguageToggle'
 
-const NAV_LINKS = ['about', 'experience', 'education', 'skills', 'projects', 'certifications', 'contact']
+const NAV_LINKS = ['about', 'experience', 'education', 'skills', 'projects', 'certifications', 'languages', 'contact']
 
 const SOCIAL_ICONS = [
   {
