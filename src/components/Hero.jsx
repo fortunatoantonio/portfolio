@@ -33,7 +33,8 @@ const FEATURES = [
 
 export default function Hero() {
   const { t } = useTranslation()
-  const textRef = useIntersectionObserver({ threshold: 0.05 })
+  const leftRef = useIntersectionObserver({ threshold: 0.05 })
+  const rightRef = useIntersectionObserver({ threshold: 0.05 })
 
   return (
     <section
@@ -47,73 +48,85 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Dark overlay — stronger on left for text readability */}
+      {/* Dark overlay */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.88) 40%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.25) 100%)' }}
+        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.2) 100%)' }}
         aria-hidden="true"
       />
 
-      {/* Content */}
+      {/* Content — due colonne: testo sinistra, feature cards destra */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-24 pb-16">
-        <div ref={textRef} className="fade-up max-w-xl">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
 
-          {/* Nome grande — bianco + giallo italic */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] mb-5">
-            <span className="text-white block">Antonio</span>
-            <span className="text-gold-400 block italic">Fortunato</span>
-          </h1>
+          {/* ── Colonna sinistra: nome, bio, CTA ── */}
+          <div ref={leftRef} className="fade-up max-w-lg flex-shrink-0">
 
-          {/* Ruoli in badge */}
-          <div className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7">
-            <span>Economista</span>
-            <span className="text-white/30 mx-1">|</span>
-            <span>Data Analyst</span>
-            <span className="text-white/30 mx-1">|</span>
-            <span>Quantitative Thinker</span>
+            {/* Nome */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] mb-5">
+              <span className="text-white block">Antonio</span>
+              <span className="text-gold-400 block italic">Fortunato</span>
+            </h1>
+
+            {/* Ruoli badge */}
+            <div className="flex flex-wrap items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7">
+              <span>Economista</span>
+              <span className="text-white/30 mx-1">|</span>
+              <span>Data Analyst</span>
+              <span className="text-white/30 mx-1">|</span>
+              <span>Quantitative Thinker</span>
+            </div>
+
+            {/* Bio formattata — parole chiave in grassetto dorato */}
+            <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10">
+              Laureato in <span className="text-white font-semibold">Economia e Commercio</span>,
+              {' '}con esperienza in analisi econometriche,
+              {' '}modellazione <span className="text-white font-semibold">ARIMA</span> e visualizzazione dati.
+              {' '}Combino rigore analitico e competenze quantitative per trasformare i dati in
+              {' '}<span className="text-gold-400 font-semibold italic">decisioni strategiche</span>.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/portfolio/antonio_fortunato_cv.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                {t('hero.cta_cv')}
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+              >
+                {t('hero.cta_projects')}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
           </div>
 
-          {/* Bio */}
-          <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10">
-            {t('hero.bio_extended')}
-          </p>
-
-          {/* 3 Feature cards */}
-          <div className="space-y-4">
+          {/* ── Colonna destra: 3 feature cards verticali ── */}
+          <div ref={rightRef} className="fade-up flex flex-col gap-4 w-full lg:w-72 lg:mt-8">
             {FEATURES.map((f, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-sm border border-gold-500/50 bg-dark-800/80 flex items-center justify-center text-gold-400 flex-shrink-0">
+              <div
+                key={i}
+                className="flex items-start gap-3 p-4 rounded-sm border border-dark-600 bg-dark-900/70 backdrop-blur-sm"
+              >
+                <div className="w-10 h-10 rounded-sm border border-gold-500/50 bg-dark-800 flex items-center justify-center text-gold-400 flex-shrink-0">
                   {f.icon}
                 </div>
-                <div>
-                  <h3 className="text-white font-bold text-sm mb-0.5">{t(f.titleKey)}</h3>
+                <div className="min-w-0">
+                  <h3 className="text-white font-bold text-sm">{t(f.titleKey)}</h3>
                   <p className="text-muted-400 text-xs leading-relaxed">{t(f.descKey)}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* CTA */}
-          <div className="flex flex-wrap gap-4 mt-10">
-            <a
-              href="/portfolio/antonio_fortunato_cv.pdf"
-              download
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-              </svg>
-              {t('hero.cta_cv')}
-            </a>
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
-            >
-              {t('hero.cta_projects')}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
 
         </div>
