@@ -1,4 +1,10 @@
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  ?? ''
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? ''
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  ?? ''
 
 const SOCIALS = [
   {
@@ -32,28 +38,147 @@ const SOCIALS = [
 
 export default function Footer() {
   const { t } = useTranslation()
+  const formRef = useRef(null)
   const year = new Date().getFullYear()
 
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [errors, setErrors] = useState({})
+
+  function validate(form) {
+    const errs = {}
+    if (!form.user_name.value.trim()) errs.name = true
+    if (!form.user_email.value.trim() || !/\S+@\S+\.\S+/.test(form.user_email.value)) errs.email = true
+    if (!form.message.value.trim()) errs.message = true
+    return errs
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const form = formRef.current
+    const errs = validate(form)
+    if (Object.keys(errs).length > 0) { setErrors(errs); return }
+
+    setErrors({})
+    setStatus('sending')
+
+    const allowed = ['fortunatoantonio.github.io', 'localhost']
+    if (!allowed.some((h) => window.location.hostname === h || window.location.hostname.endsWith(h))) {
+      setStatus('error'); return
+    }
+
+    try {
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, EMAILJS_PUBLIC_KEY)
+      setStatus('success')
+      form.reset()
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  // Input styles — dark theme
+  const inputBase = 'w-full px-4 py-3 rounded-xl text-sm bg-navy-800 border text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-colors'
+  const inputNormal = `${inputBase} border-navy-700 focus:border-indigo-400 focus:ring-indigo-500/30`
+  const inputError  = `${inputBase} border-red-500 focus:border-red-400 focus:ring-red-500/30`
+
   return (
-    <footer className="bg-navy-900 text-white">
+    <footer id="contact" className="bg-navy-900 text-white">
 
-      {/* ── Sezione Contatti nel blu ── */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-10">
+      {/* ── Contatti centrati stile dark ── */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
 
-        {/* Titolo "Contatti" in stile coerente con le altre sezioni */}
-        <div className="flex items-center gap-4 mb-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-            {t('contact.title')}
-          </h2>
-          <div className="flex-1 h-px bg-navy-700" />
-        </div>
-
-        <p className="text-indigo-300 text-sm sm:text-base leading-relaxed max-w-xl mb-8">
-          {t('contact.subtitle')}
+        {/* Etichetta piccola sopra */}
+        <p className="text-indigo-400 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+          {t('contact.eyebrow')}
         </p>
 
-        {/* Social links */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Titolo grande */}
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-10">
+          {t('contact.title')}
+        </h2>
+
+        {/* Form centrato */}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          noValidate
+          className="text-left space-y-4"
+        >
+          {/* Nome + Email affiancati su desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="footer_name" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+                {t('contact.name_label')}
+              </label>
+              <input
+                id="footer_name"
+                name="user_name"
+                type="text"
+                autoComplete="name"
+                placeholder={t('contact.name_placeholder')}
+                className={errors.name ? inputError : inputNormal}
+                aria-invalid={!!errors.name}
+              />
+            </div>
+            <div>
+              <label htmlFor="footer_email" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+                {t('contact.email_label')}
+              </label>
+              <input
+                id="footer_email"
+                name="user_email"
+                type="email"
+                autoComplete="email"
+                placeholder={t('contact.email_placeholder')}
+                className={errors.email ? inputError : inputNormal}
+                aria-invalid={!!errors.email}
+              />
+            </div>
+          </div>
+
+          {/* Messaggio */}
+          <div>
+            <label htmlFor="footer_message" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+              {t('contact.message_label')}
+            </label>
+            <textarea
+              id="footer_message"
+              name="message"
+              rows={4}
+              placeholder={t('contact.message_placeholder')}
+              className={errors.message ? inputError : inputNormal}
+              aria-invalid={!!errors.message}
+            />
+          </div>
+
+          {/* Bottone pill centrato — stile riferimento */}
+          <div className="flex justify-center pt-2">
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-semibold rounded-full transition-colors shadow-lg shadow-indigo-500/25 text-sm"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              {status === 'sending' ? t('contact.sending') : t('contact.send')}
+            </button>
+          </div>
+
+          {/* Feedback */}
+          {status === 'success' && (
+            <p role="alert" className="text-center text-emerald-400 text-sm font-medium bg-emerald-900/30 border border-emerald-700/50 rounded-xl px-4 py-3">
+              {t('contact.success')}
+            </p>
+          )}
+          {status === 'error' && (
+            <p role="alert" className="text-center text-red-400 text-sm font-medium bg-red-900/30 border border-red-700/50 rounded-xl px-4 py-3">
+              {t('contact.error')}
+            </p>
+          )}
+        </form>
+
+        {/* Icone social */}
+        <div className="flex items-center justify-center gap-5 mt-10">
           {SOCIALS.map((s) => (
             <a
               key={s.label}
@@ -61,41 +186,19 @@ export default function Footer() {
               target={s.href.startsWith('http') ? '_blank' : undefined}
               rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               aria-label={s.label}
-              className="flex items-center gap-3 px-4 py-3 rounded-xl bg-navy-800 hover:bg-indigo-600 transition-colors group"
+              className="text-slate-500 hover:text-indigo-400 transition-colors"
             >
-              <span className="text-indigo-300 group-hover:text-white transition-colors flex-shrink-0">
-                {s.icon}
-              </span>
-              <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
-                {s.label}
-              </span>
+              {s.icon}
             </a>
           ))}
         </div>
       </div>
 
-      {/* ── Divisore ── */}
-      <div className="border-t border-navy-800" />
-
-      {/* ── Riga info portfolio ── */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-
-          <div className="text-center sm:text-left">
-            <p className="font-bold text-white text-sm">Antonio Fortunato</p>
-            <p className="text-indigo-400 text-xs mt-0.5">Analyst · Data Analysis · Business Intelligence</p>
-          </div>
-
-          <p className="text-slate-500 text-xs text-center">
-            © {year} Antonio Fortunato · {t('footer.rights')}
-          </p>
-
-        </div>
-      </div>
-
-      {/* ── Striscia tecnica ── */}
-      <div className="border-t border-navy-800 py-2.5 px-4 text-center">
-        <p className="text-slate-700 text-xs">{t('footer.built_with')}</p>
+      {/* ── Copyright ── */}
+      <div className="border-t border-navy-800 py-4 px-4 text-center">
+        <p className="text-slate-600 text-xs">
+          © {year} Antonio Fortunato · {t('footer.rights')}
+        </p>
       </div>
 
     </footer>

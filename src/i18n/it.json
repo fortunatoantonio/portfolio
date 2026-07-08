@@ -142,6 +142,7 @@
   },
   "contact": {
     "title": "Contatti",
+    "eyebrow": "Iniziamo una conversazione",
     "subtitle": "Hai un progetto interessante, una proposta di collaborazione o vuoi semplicemente conoscermi meglio? Scrivimi — rispondo entro 24 ore.",
     "name_label": "Nome",
     "name_placeholder": "Il tuo nome",
