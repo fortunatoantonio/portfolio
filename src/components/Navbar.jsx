@@ -36,9 +36,9 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#hero"
-          className="text-navy-900 font-bold text-lg tracking-tight hover:text-navy-600 transition-colors"
+          className="text-navy-900 font-bold text-lg tracking-tight hover:text-navy-700 transition-colors"
         >
-          Antonio<span className="text-indigo-400"> Fortunato</span>
+          Antonio Fortunato
         </a>
 
         {/* Desktop links */}

@@ -58,6 +58,11 @@ body {
   50% { border-color: transparent }
 }
 
+/* Cursor blinks while typing, then disappears after typing is done */
+@keyframes hide-cursor {
+  to { border-color: transparent }
+}
+
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
@@ -65,7 +70,8 @@ body {
   width: 0;
   animation:
     typing 2.2s steps(30, end) 0.5s forwards,
-    blink 0.75s step-end infinite;
+    blink 0.75s step-end 8,
+    hide-cursor 0s 2.7s forwards;
 }
 
 /* ── Timeline ── */

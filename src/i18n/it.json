@@ -9,7 +9,7 @@
     "contact": "Contatti"
   },
   "hero": {
-    "greeting": "Ciao, sono",
+    "greeting": "Benvenuti nella pagina di",
     "name": "Antonio Fortunato",
     "role": "Analyst",
     "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
@@ -115,12 +115,6 @@
         "name": "Business Dashboard",
         "description": "Dashboard per il monitoraggio dei KPI aziendali con visualizzazioni interattive.",
         "lang": "Python",
-        "url": "https://github.com/fortunatoantonio"
-      },
-      {
-        "name": "Tesi Repository",
-        "description": "Repository dedicato al progetto di tesi magistrale con codice e documentazione.",
-        "lang": "Python / R",
         "url": "https://github.com/fortunatoantonio"
       }
     ]
