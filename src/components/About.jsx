@@ -6,7 +6,7 @@ export default function About() {
   const ref = useIntersectionObserver()
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 bg-white">
+    <section id="about" className="py-12 sm:py-16 px-4 sm:px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div ref={ref} className="fade-up">
           <SectionTitle title={t('about.title')} />

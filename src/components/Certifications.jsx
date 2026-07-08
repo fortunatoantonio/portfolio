@@ -33,7 +33,7 @@ export default function Certifications() {
   const items = t('certifications.items', { returnObjects: true })
 
   return (
-    <section id="certifications" className="py-20 px-4 sm:px-6 bg-white">
+    <section id="certifications" className="py-12 sm:py-16 px-4 sm:px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('certifications.title')} />

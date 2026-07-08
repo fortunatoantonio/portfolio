@@ -116,20 +116,22 @@ export default function Contact() {
   const inputError = `${inputBase} border-red-400 focus:border-red-400 focus:ring-red-200`
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 bg-slate-50">
+    <section id="contact" className="py-14 sm:py-16 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('contact.title')} />
-          <p className="mt-3 text-navy-600 text-base">{t('contact.subtitle')}</p>
+          <p className="mt-2 text-navy-600 text-sm sm:text-base leading-relaxed max-w-xl">
+            {t('contact.subtitle')}
+          </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-5 gap-10">
-          {/* Contact form */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10">
+          {/* Form */}
           <form
             ref={formRef}
             onSubmit={handleSubmit}
             noValidate
-            className="fade-up md:col-span-3 space-y-5"
+            className="fade-up md:col-span-3 space-y-4"
           >
             <div>
               <label htmlFor="user_name" className="block text-sm font-semibold text-navy-700 mb-1">
@@ -168,7 +170,7 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
-                rows={5}
+                rows={4}
                 placeholder={t('contact.message_placeholder')}
                 className={errors.message ? inputError : inputNormal}
                 aria-invalid={!!errors.message}
@@ -178,7 +180,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full sm:w-auto px-8 py-3 bg-navy-800 text-white font-semibold rounded-lg hover:bg-navy-700 disabled:opacity-60 transition-colors shadow-md"
+              className="w-full sm:w-auto px-7 py-2.5 bg-navy-800 text-white text-sm font-semibold rounded-lg hover:bg-navy-700 disabled:opacity-60 transition-colors shadow-md"
             >
               {status === 'sending' ? t('contact.sending') : t('contact.send')}
             </button>
@@ -195,24 +197,24 @@ export default function Contact() {
             )}
           </form>
 
-          {/* Social links */}
+          {/* Social links — layout fisso che non si smonta */}
           <div className="fade-up md:col-span-2">
-            <p className="text-sm font-semibold text-navy-600 mb-4 uppercase tracking-widest">
+            <p className="text-xs font-semibold text-navy-500 mb-4 uppercase tracking-widest">
               {t('contact.or_reach')}
             </p>
-            <div className="space-y-3">
+            <div className="flex flex-col gap-3">
               {SOCIAL_LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-3 text-navy-700 hover:text-indigo-500 transition-colors text-sm font-medium"
+                  className="flex items-center gap-3 text-navy-700 hover:text-indigo-500 transition-colors group"
                 >
-                  <span className="w-9 h-9 rounded-full bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-500 flex-shrink-0">
+                  <span className="w-9 h-9 rounded-full bg-white border border-indigo-100 shadow-sm flex items-center justify-center text-indigo-400 group-hover:bg-indigo-50 transition-colors flex-shrink-0">
                     {link.icon}
                   </span>
-                  {link.label}
+                  <span className="text-sm font-medium truncate">{link.label}</span>
                 </a>
               ))}
             </div>

@@ -37,7 +37,7 @@ export default function Skills() {
   const tools = t('skills.tools', { returnObjects: true })
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 bg-white">
+    <section id="skills" className="py-12 sm:py-16 px-4 sm:px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div ref={ref} className="fade-up">
           <SectionTitle title={t('skills.title')} />
