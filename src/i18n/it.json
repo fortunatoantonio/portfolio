@@ -9,7 +9,10 @@
     "contact": "Contatti"
   },
   "hero": {
+    "badge": "Analyst · Laureato con lode",
     "greeting": "Benvenuti nella pagina di",
+    "firstname": "Antonio",
+    "lastname": "Fortunato",
     "name": "Antonio Fortunato",
     "role": "Analyst",
     "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",

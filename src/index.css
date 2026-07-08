@@ -1,16 +1,27 @@
 @import "tailwindcss";
 
-/* ── Custom theme tokens ── */
+/* ── Palette: Nero / Giallo / Bianco ── */
 @theme {
-  --color-navy-900: #0f1b3d;
-  --color-navy-800: #1a2c5b;
-  --color-navy-700: #243878;
-  --color-navy-600: #2e4595;
-  --color-navy-500: #3852b2;
-  --color-indigo-400: #6272d8;
-  --color-indigo-300: #8e9de6;
-  --color-indigo-100: #e8ebfa;
-  --color-slate-50: #f8f9fc;
+  /* Neri e grigi scuri */
+  --color-dark-950: #0a0a0a;
+  --color-dark-900: #111111;
+  --color-dark-800: #1a1a1a;
+  --color-dark-700: #242424;
+  --color-dark-600: #2e2e2e;
+  --color-dark-500: #3a3a3a;
+
+  /* Giallo oro */
+  --color-gold-500: #e8c547;
+  --color-gold-400: #f0d060;
+  --color-gold-300: #f5dc80;
+  --color-gold-200: #faedb0;
+  --color-gold-100: #fdf7e0;
+
+  /* Grigi chiari per testi secondari */
+  --color-muted-400: #9ca3af;
+  --color-muted-300: #d1d5db;
+  --color-muted-200: #e5e7eb;
+
   --font-sans: 'Inter', system-ui, sans-serif;
 }
 
@@ -21,8 +32,8 @@ html {
 }
 
 body {
-  background-color: #f8f9fc;
-  color: #1a2c5b;
+  background-color: #111111;
+  color: #f5f5f5;
 }
 
 /* ── Scroll-driven animations ── */
@@ -61,17 +72,15 @@ body {
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #3852b2;
+  border-right: 2px solid #e8c547;
   width: 0;
   animation:
     typing 2.2s steps(40, end) 0.5s forwards,
     blink 0.7s step-end 6,
     hide-cursor 0s 2.8s forwards;
-  /* Mobile: riduci il testo se serve */
   max-width: 100%;
 }
 
-/* Su schermi piccoli permetti il wrap e togli l'overflow hidden */
 @media (max-width: 480px) {
   .typewriter {
     white-space: normal;
@@ -90,10 +99,10 @@ body {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #3852b2, #e8ebfa);
+  background: linear-gradient(to bottom, #e8c547, #2e2e2e);
 }
 
-/* ── Section spacing — ridotto su mobile ── */
+/* ── Section spacing ── */
 section {
   scroll-margin-top: 64px;
 }

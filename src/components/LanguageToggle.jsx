@@ -14,11 +14,11 @@ export default function LanguageToggle({ className = '' }) {
     <button
       onClick={toggle}
       aria-label={`Switch to ${current === 'it' ? 'English' : 'Italian'}`}
-      className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-semibold border border-navy-700 text-navy-700 hover:bg-navy-700 hover:text-white transition-colors duration-200 ${className}`}
+      className={`flex items-center gap-1 px-3 py-1.5 rounded-sm text-xs font-bold border border-white/20 text-white/70 hover:border-gold-400 hover:text-gold-400 transition-colors duration-200 tracking-widest ${className}`}
     >
-      <span className={current === 'it' ? 'opacity-100' : 'opacity-40'}>IT</span>
-      <span className="text-navy-400">/</span>
-      <span className={current === 'en' ? 'opacity-100' : 'opacity-40'}>EN</span>
+      <span className={current === 'it' ? 'opacity-100' : 'opacity-35'}>IT</span>
+      <span className="text-white/30 mx-0.5">/</span>
+      <span className={current === 'en' ? 'opacity-100' : 'opacity-35'}>EN</span>
     </button>
   )
 }

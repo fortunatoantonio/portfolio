@@ -13,8 +13,7 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <Hero />
-        <About />
+        <Hero />        <About />
         <Experience />
         <Education />
         <Skills />

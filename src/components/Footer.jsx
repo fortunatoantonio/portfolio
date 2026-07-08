@@ -40,8 +40,7 @@ export default function Footer() {
   const { t } = useTranslation()
   const formRef = useRef(null)
   const year = new Date().getFullYear()
-
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [status, setStatus] = useState('idle')
   const [errors, setErrors] = useState({})
 
   function validate(form) {
@@ -57,15 +56,12 @@ export default function Footer() {
     const form = formRef.current
     const errs = validate(form)
     if (Object.keys(errs).length > 0) { setErrors(errs); return }
-
     setErrors({})
     setStatus('sending')
-
     const allowed = ['fortunatoantonio.github.io', 'localhost']
     if (!allowed.some((h) => window.location.hostname === h || window.location.hostname.endsWith(h))) {
       setStatus('error'); return
     }
-
     try {
       await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, EMAILJS_PUBLIC_KEY)
       setStatus('success')
@@ -75,118 +71,94 @@ export default function Footer() {
     }
   }
 
-  // Input styles — dark theme
-  const inputBase = 'w-full px-4 py-3 rounded-xl text-sm bg-navy-800 border text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-colors'
-  const inputNormal = `${inputBase} border-navy-700 focus:border-indigo-400 focus:ring-indigo-500/30`
-  const inputError  = `${inputBase} border-red-500 focus:border-red-400 focus:ring-red-500/30`
+  const inputBase = 'w-full px-4 py-3 rounded-sm text-sm bg-dark-800 border text-white placeholder-muted-400/50 focus:outline-none focus:ring-2 transition-colors'
+  const inputNormal = `${inputBase} border-dark-600 focus:border-gold-400 focus:ring-gold-400/20`
+  const inputError  = `${inputBase} border-red-500 focus:border-red-400 focus:ring-red-500/20`
 
   return (
-    <footer id="contact" className="bg-navy-900 text-white">
+    <footer id="contact" className="bg-dark-950 text-white">
 
-      {/* ── Contatti centrati stile dark ── */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
+      {/* ── Form contatti centrato ── */}
+      <div className="max-w-2xl mx-auto px-4 sm:px-8 pt-16 pb-12 text-center">
 
-        {/* Etichetta piccola sopra */}
-        <p className="text-indigo-400 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+        {/* Eyebrow */}
+        <p className="text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-4">
           {t('contact.eyebrow')}
         </p>
 
-        {/* Titolo grande */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-10">
+        {/* Titolo */}
+        <h2 className="text-4xl sm:text-5xl font-black text-white mb-10">
           {t('contact.title')}
         </h2>
 
-        {/* Form centrato */}
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          noValidate
-          className="text-left space-y-4"
-        >
-          {/* Nome + Email affiancati su desktop */}
+        {/* Form */}
+        <form ref={formRef} onSubmit={handleSubmit} noValidate className="text-left space-y-4">
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="footer_name" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+              <label htmlFor="f_name" className="block text-xs font-bold text-muted-400 mb-1.5 uppercase tracking-wider">
                 {t('contact.name_label')}
               </label>
-              <input
-                id="footer_name"
-                name="user_name"
-                type="text"
-                autoComplete="name"
+              <input id="f_name" name="user_name" type="text" autoComplete="name"
                 placeholder={t('contact.name_placeholder')}
                 className={errors.name ? inputError : inputNormal}
-                aria-invalid={!!errors.name}
-              />
+                aria-invalid={!!errors.name} />
             </div>
             <div>
-              <label htmlFor="footer_email" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+              <label htmlFor="f_email" className="block text-xs font-bold text-muted-400 mb-1.5 uppercase tracking-wider">
                 {t('contact.email_label')}
               </label>
-              <input
-                id="footer_email"
-                name="user_email"
-                type="email"
-                autoComplete="email"
+              <input id="f_email" name="user_email" type="email" autoComplete="email"
                 placeholder={t('contact.email_placeholder')}
                 className={errors.email ? inputError : inputNormal}
-                aria-invalid={!!errors.email}
-              />
+                aria-invalid={!!errors.email} />
             </div>
           </div>
 
-          {/* Messaggio */}
           <div>
-            <label htmlFor="footer_message" className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+            <label htmlFor="f_message" className="block text-xs font-bold text-muted-400 mb-1.5 uppercase tracking-wider">
               {t('contact.message_label')}
             </label>
-            <textarea
-              id="footer_message"
-              name="message"
-              rows={4}
+            <textarea id="f_message" name="message" rows={4}
               placeholder={t('contact.message_placeholder')}
               className={errors.message ? inputError : inputNormal}
-              aria-invalid={!!errors.message}
-            />
+              aria-invalid={!!errors.message} />
           </div>
 
-          {/* Bottone pill centrato — stile riferimento */}
+          {/* Bottone pill giallo — come il riferimento */}
           <div className="flex justify-center pt-2">
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-semibold rounded-full transition-colors shadow-lg shadow-indigo-500/25 text-sm"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold-500 hover:bg-gold-400 disabled:opacity-60 text-dark-950 font-bold rounded-full transition-colors shadow-lg shadow-gold-500/20 text-sm"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               {status === 'sending' ? t('contact.sending') : t('contact.send')}
             </button>
           </div>
 
-          {/* Feedback */}
           {status === 'success' && (
-            <p role="alert" className="text-center text-emerald-400 text-sm font-medium bg-emerald-900/30 border border-emerald-700/50 rounded-xl px-4 py-3">
+            <p role="alert" className="text-center text-gold-300 text-sm bg-gold-500/10 border border-gold-500/30 rounded-sm px-4 py-3">
               {t('contact.success')}
             </p>
           )}
           {status === 'error' && (
-            <p role="alert" className="text-center text-red-400 text-sm font-medium bg-red-900/30 border border-red-700/50 rounded-xl px-4 py-3">
+            <p role="alert" className="text-center text-red-400 text-sm bg-red-900/20 border border-red-700/40 rounded-sm px-4 py-3">
               {t('contact.error')}
             </p>
           )}
         </form>
 
-        {/* Icone social */}
-        <div className="flex items-center justify-center gap-5 mt-10">
+        {/* Social icons */}
+        <div className="flex items-center justify-center gap-6 mt-10">
           {SOCIALS.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
+            <a key={s.label} href={s.href}
               target={s.href.startsWith('http') ? '_blank' : undefined}
               rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               aria-label={s.label}
-              className="text-slate-500 hover:text-indigo-400 transition-colors"
+              className="text-muted-400 hover:text-gold-400 transition-colors"
             >
               {s.icon}
             </a>
@@ -195,8 +167,8 @@ export default function Footer() {
       </div>
 
       {/* ── Copyright ── */}
-      <div className="border-t border-navy-800 py-4 px-4 text-center">
-        <p className="text-slate-600 text-xs">
+      <div className="border-t border-dark-800 py-4 px-4 text-center">
+        <p className="text-dark-500 text-xs">
           © {year} Antonio Fortunato · {t('footer.rights')}
         </p>
       </div>

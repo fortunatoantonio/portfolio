@@ -9,7 +9,7 @@ export default function Experience() {
   const items = t('experience.items', { returnObjects: true })
 
   return (
-    <section id="experience" className="py-12 sm:py-16 px-4 sm:px-6 bg-slate-50">
+    <section id="experience" className="py-16 sm:py-20 px-4 sm:px-8 bg-dark-900">
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('experience.title')} />
