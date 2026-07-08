@@ -2,11 +2,7 @@ import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 import useIntersectionObserver from '../hooks/useIntersectionObserver'
-import { SectionTitle } from './About'
 
-// ── Credenziali EmailJS — lette da .env (mai hardcodate nel sorgente) ──
-// Crea un file .env nella root del progetto (vedi .env.example).
-// Vite espone solo le variabili con prefisso VITE_ al browser.
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  ?? ''
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? ''
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  ?? ''
@@ -31,7 +27,7 @@ const SOCIAL_LINKS = [
     ),
   },
   {
-    label: 'Email',
+    label: 'fortunatoantonio908@gmail.com',
     href: 'mailto:fortunatoantonio908@gmail.com',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -52,25 +48,16 @@ const SOCIAL_LINKS = [
 
 export default function Contact() {
   const { t } = useTranslation()
-  const titleRef = useIntersectionObserver()
+  const sectionRef = useIntersectionObserver()
   const formRef = useRef(null)
 
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [status, setStatus] = useState('idle')
   const [errors, setErrors] = useState({})
-
-  // Avviso in sviluppo se le credenziali EmailJS non sono configurate
-  if (import.meta.env.DEV && !EMAILJS_PUBLIC_KEY) {
-    console.warn(
-      '[Contact] Credenziali EmailJS mancanti.\n' +
-      'Crea un file .env nella root del progetto (vedi .env.example).'
-    )
-  }
 
   function validate(form) {
     const errs = {}
     if (!form.user_name.value.trim()) errs.name = true
-    if (!form.user_email.value.trim() || !/\S+@\S+\.\S+/.test(form.user_email.value))
-      errs.email = true
+    if (!form.user_email.value.trim() || !/\S+@\S+\.\S+/.test(form.user_email.value)) errs.email = true
     if (!form.message.value.trim()) errs.message = true
     return errs
   }
@@ -79,30 +66,18 @@ export default function Contact() {
     e.preventDefault()
     const form = formRef.current
     const errs = validate(form)
-
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs)
-      return
-    }
+    if (Object.keys(errs).length > 0) { setErrors(errs); return }
 
     setErrors({})
     setStatus('sending')
 
-    // Blocca invii da origini non autorizzate (protezione lato client)
     const allowed = ['fortunatoantonio.github.io', 'localhost']
-    const host = window.location.hostname
-    if (!allowed.some((h) => host === h || host.endsWith(h))) {
-      setStatus('error')
-      return
+    if (!allowed.some((h) => window.location.hostname === h || window.location.hostname.endsWith(h))) {
+      setStatus('error'); return
     }
 
     try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form,
-        EMAILJS_PUBLIC_KEY
-      )
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, EMAILJS_PUBLIC_KEY)
       setStatus('success')
       form.reset()
     } catch {
@@ -110,114 +85,104 @@ export default function Contact() {
     }
   }
 
-  const inputBase =
-    'w-full px-4 py-3 rounded-lg border text-navy-800 text-sm bg-white focus:outline-none focus:ring-2 transition-colors'
+  const inputBase = 'w-full px-4 py-3 rounded-lg border text-navy-800 text-sm bg-white focus:outline-none focus:ring-2 transition-colors'
   const inputNormal = `${inputBase} border-gray-200 focus:border-indigo-400 focus:ring-indigo-200`
-  const inputError = `${inputBase} border-red-400 focus:border-red-400 focus:ring-red-200`
+  const inputError  = `${inputBase} border-red-400 focus:border-red-400 focus:ring-red-200`
 
   return (
-    <section id="contact" className="py-14 sm:py-16 px-4 sm:px-6 bg-slate-50">
+    <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-4xl mx-auto">
-        <div ref={titleRef} className="fade-up">
-          <SectionTitle title={t('contact.title')} />
-          <p className="mt-2 text-navy-600 text-sm sm:text-base leading-relaxed max-w-xl">
-            {t('contact.subtitle')}
-          </p>
-        </div>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10">
-          {/* Form */}
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            noValidate
-            className="fade-up md:col-span-3 space-y-4"
-          >
-            <div>
-              <label htmlFor="user_name" className="block text-sm font-semibold text-navy-700 mb-1">
-                {t('contact.name_label')}
-              </label>
-              <input
-                id="user_name"
-                name="user_name"
-                type="text"
-                autoComplete="name"
-                placeholder={t('contact.name_placeholder')}
-                className={errors.name ? inputError : inputNormal}
-                aria-invalid={!!errors.name}
-              />
-            </div>
+        {/* Il titolo è stato spostato nel Footer — qui solo il form */}
+        <div ref={sectionRef} className="fade-up">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10">
 
-            <div>
-              <label htmlFor="user_email" className="block text-sm font-semibold text-navy-700 mb-1">
-                {t('contact.email_label')}
-              </label>
-              <input
-                id="user_email"
-                name="user_email"
-                type="email"
-                autoComplete="email"
-                placeholder={t('contact.email_placeholder')}
-                className={errors.email ? inputError : inputNormal}
-                aria-invalid={!!errors.email}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-navy-700 mb-1">
-                {t('contact.message_label')}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                placeholder={t('contact.message_placeholder')}
-                className={errors.message ? inputError : inputNormal}
-                aria-invalid={!!errors.message}
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === 'sending'}
-              className="w-full sm:w-auto px-7 py-2.5 bg-navy-800 text-white text-sm font-semibold rounded-lg hover:bg-navy-700 disabled:opacity-60 transition-colors shadow-md"
+            {/* Form */}
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              noValidate
+              className="md:col-span-3 space-y-4"
             >
-              {status === 'sending' ? t('contact.sending') : t('contact.send')}
-            </button>
+              <div>
+                <label htmlFor="user_name" className="block text-sm font-semibold text-navy-700 mb-1">
+                  {t('contact.name_label')}
+                </label>
+                <input
+                  id="user_name" name="user_name" type="text" autoComplete="name"
+                  placeholder={t('contact.name_placeholder')}
+                  className={errors.name ? inputError : inputNormal}
+                  aria-invalid={!!errors.name}
+                />
+              </div>
 
-            {status === 'success' && (
-              <p role="alert" className="text-emerald-700 text-sm font-medium bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3">
-                {t('contact.success')}
-              </p>
-            )}
-            {status === 'error' && (
-              <p role="alert" className="text-red-700 text-sm font-medium bg-red-50 border border-red-200 rounded-lg px-4 py-3">
-                {t('contact.error')}
-              </p>
-            )}
-          </form>
+              <div>
+                <label htmlFor="user_email" className="block text-sm font-semibold text-navy-700 mb-1">
+                  {t('contact.email_label')}
+                </label>
+                <input
+                  id="user_email" name="user_email" type="email" autoComplete="email"
+                  placeholder={t('contact.email_placeholder')}
+                  className={errors.email ? inputError : inputNormal}
+                  aria-invalid={!!errors.email}
+                />
+              </div>
 
-          {/* Social links — layout fisso che non si smonta */}
-          <div className="fade-up md:col-span-2">
-            <p className="text-xs font-semibold text-navy-500 mb-4 uppercase tracking-widest">
-              {t('contact.or_reach')}
-            </p>
-            <div className="flex flex-col gap-3">
-              {SOCIAL_LINKS.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.href.startsWith('http') ? '_blank' : undefined}
-                  rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-3 text-navy-700 hover:text-indigo-500 transition-colors group"
-                >
-                  <span className="w-9 h-9 rounded-full bg-white border border-indigo-100 shadow-sm flex items-center justify-center text-indigo-400 group-hover:bg-indigo-50 transition-colors flex-shrink-0">
-                    {link.icon}
-                  </span>
-                  <span className="text-sm font-medium truncate">{link.label}</span>
-                </a>
-              ))}
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-navy-700 mb-1">
+                  {t('contact.message_label')}
+                </label>
+                <textarea
+                  id="message" name="message" rows={4}
+                  placeholder={t('contact.message_placeholder')}
+                  className={errors.message ? inputError : inputNormal}
+                  aria-invalid={!!errors.message}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="w-full sm:w-auto px-7 py-2.5 bg-navy-800 text-white text-sm font-semibold rounded-lg hover:bg-navy-700 disabled:opacity-60 transition-colors shadow-md"
+              >
+                {status === 'sending' ? t('contact.sending') : t('contact.send')}
+              </button>
+
+              {status === 'success' && (
+                <p role="alert" className="text-emerald-700 text-sm font-medium bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3">
+                  {t('contact.success')}
+                </p>
+              )}
+              {status === 'error' && (
+                <p role="alert" className="text-red-700 text-sm font-medium bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                  {t('contact.error')}
+                </p>
+              )}
+            </form>
+
+            {/* Contatti diretti */}
+            <div className="md:col-span-2">
+              <p className="text-xs font-semibold text-navy-500 mb-4 uppercase tracking-widest">
+                {t('contact.or_reach')}
+              </p>
+              <div className="flex flex-col gap-3">
+                {SOCIAL_LINKS.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={link.href.startsWith('http') ? '_blank' : undefined}
+                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="flex items-center gap-3 text-navy-700 hover:text-indigo-500 transition-colors group"
+                  >
+                    <span className="w-9 h-9 rounded-full bg-white border border-indigo-100 shadow-sm flex items-center justify-center text-indigo-400 group-hover:bg-indigo-50 transition-colors flex-shrink-0">
+                      {link.icon}
+                    </span>
+                    <span className="text-sm font-medium break-all">{link.label}</span>
+                  </a>
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </div>

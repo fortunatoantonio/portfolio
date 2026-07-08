@@ -36,46 +36,68 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy-900 text-white">
-      {/* Main footer row */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between sm:items-center">
 
-          {/* Nome + tagline */}
-          <div className="text-center sm:text-left">
-            <p className="font-bold text-white text-base">Antonio Fortunato</p>
-            <p className="text-indigo-300 text-xs mt-0.5">Analyst · Data Analysis · Business Intelligence</p>
-          </div>
+      {/* ── Sezione Contatti nel blu ── */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-10">
 
-          {/* Social icons */}
-          <div className="flex items-center gap-3">
-            {SOCIALS.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target={s.href.startsWith('http') ? '_blank' : undefined}
-                rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                aria-label={s.label}
-                className="w-9 h-9 rounded-full bg-navy-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-500 transition-colors"
-              >
+        {/* Titolo "Contatti" in stile coerente con le altre sezioni */}
+        <div className="flex items-center gap-4 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+            {t('contact.title')}
+          </h2>
+          <div className="flex-1 h-px bg-navy-700" />
+        </div>
+
+        <p className="text-indigo-300 text-sm sm:text-base leading-relaxed max-w-xl mb-8">
+          {t('contact.subtitle')}
+        </p>
+
+        {/* Social links */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {SOCIALS.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target={s.href.startsWith('http') ? '_blank' : undefined}
+              rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              aria-label={s.label}
+              className="flex items-center gap-3 px-4 py-3 rounded-xl bg-navy-800 hover:bg-indigo-600 transition-colors group"
+            >
+              <span className="text-indigo-300 group-hover:text-white transition-colors flex-shrink-0">
                 {s.icon}
-              </a>
-            ))}
+              </span>
+              <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors">
+                {s.label}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Divisore ── */}
+      <div className="border-t border-navy-800" />
+
+      {/* ── Riga info portfolio ── */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+
+          <div className="text-center sm:text-left">
+            <p className="font-bold text-white text-sm">Antonio Fortunato</p>
+            <p className="text-indigo-400 text-xs mt-0.5">Analyst · Data Analysis · Business Intelligence</p>
           </div>
 
-          {/* Copyright */}
-          <p className="text-slate-500 text-xs text-center sm:text-right">
-            © {year} Antonio Fortunato<br className="sm:hidden" />
-            <span className="hidden sm:inline"> · </span>
-            {t('footer.rights')}
+          <p className="text-slate-500 text-xs text-center">
+            © {year} Antonio Fortunato · {t('footer.rights')}
           </p>
 
         </div>
       </div>
 
-      {/* Bottom stripe */}
-      <div className="border-t border-navy-800 py-3 px-4 text-center">
-        <p className="text-slate-600 text-xs">{t('footer.built_with')}</p>
+      {/* ── Striscia tecnica ── */}
+      <div className="border-t border-navy-800 py-2.5 px-4 text-center">
+        <p className="text-slate-700 text-xs">{t('footer.built_with')}</p>
       </div>
+
     </footer>
   )
 }
