@@ -56,11 +56,11 @@ export default function Hero() {
       />
 
       {/* Content — due colonne: testo sinistra, feature cards destra */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-24 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20 pb-16">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
 
           {/* ── Colonna sinistra: nome, bio, CTA ── */}
-          <div ref={leftRef} className="fade-up max-w-lg flex-shrink-0">
+          <div ref={leftRef} className="fade-up max-w-md flex-shrink-0">
 
             {/* Nome */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] mb-5">
