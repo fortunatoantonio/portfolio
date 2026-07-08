@@ -77,8 +77,8 @@ export default function Hero() {
               <span>Quantitative Thinker</span>
             </div>
 
-            {/* Bio formattata — parole chiave in grassetto dorato */}
-            <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10">
+            {/* Bio formattata — parole chiave in grassetto dorato, testo giustificato */}
+            <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10 text-justify">
               Laureato in <span className="text-white font-semibold">Economia e Commercio</span>,
               {' '}con esperienza in analisi econometriche,
               {' '}modellazione <span className="text-white font-semibold">ARIMA</span> e visualizzazione dati.
@@ -132,12 +132,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/30 animate-bounce">
+      {/* Scroll indicator — porta al Profilo Professionale */}
+      <a href="#about" className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/30 hover:text-gold-400 animate-bounce transition-colors" aria-label="Scorri al profilo">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
-      </div>
+      </a>
     </section>
   )
 }
