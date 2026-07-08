@@ -38,7 +38,7 @@ function TimelineItem({ item, variant, delay }) {
               {item.location && <span className="font-normal text-muted-400"> · {item.location}</span>}
             </p>
             {item.description && (
-              <p className="text-muted-400 text-sm leading-relaxed mt-2">{item.description}</p>
+              <p className="text-muted-400 text-sm leading-relaxed mt-2 text-justify">{item.description}</p>
             )}
           </>
         ) : (

@@ -57,7 +57,7 @@ export default function Hero() {
 
       {/* Content — due colonne: testo sinistra, feature cards destra */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20 pb-16">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
 
           {/* ── Colonna sinistra: nome, bio, CTA ── */}
           <div ref={leftRef} className="fade-up max-w-md flex-shrink-0">
@@ -68,12 +68,12 @@ export default function Hero() {
               <span className="text-gold-400 block italic">Fortunato</span>
             </h1>
 
-            {/* Ruoli badge */}
-            <div className="flex flex-wrap items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7">
+            {/* Ruoli badge — tutto su un rigo */}
+            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
               <span>Economista</span>
-              <span className="text-white/30 mx-1">|</span>
+              <span className="text-white/30 mx-2">|</span>
               <span>Data Analyst</span>
-              <span className="text-white/30 mx-1">|</span>
+              <span className="text-white/30 mx-2">|</span>
               <span>Quantitative Thinker</span>
             </div>
 
@@ -111,8 +111,8 @@ export default function Hero() {
 
           </div>
 
-          {/* ── Colonna destra: 3 feature cards verticali ── */}
-          <div ref={rightRef} className="fade-up flex flex-col gap-4 w-full lg:w-72 lg:mt-8">
+          {/* ── Colonna destra: 3 feature cards verticali — centrate in altezza ── */}
+          <div ref={rightRef} className="fade-up flex flex-col justify-center gap-4 w-full lg:w-72 lg:self-center">
             {FEATURES.map((f, i) => (
               <div
                 key={i}
