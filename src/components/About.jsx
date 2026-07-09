@@ -26,12 +26,15 @@ export default function About() {
 
 export function SectionTitle({ title, className = '', light = false }) {
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <h2 className={`text-2xl sm:text-3xl font-extrabold whitespace-nowrap ${light ? 'text-dark-900' : 'text-white'}`}>
+    <div className={`text-center ${className}`}>
+      <h2 className={`text-2xl sm:text-3xl font-extrabold ${light ? 'text-dark-900' : 'text-white'}`}>
         {title}
       </h2>
-      <div className={`flex-1 h-px ${light ? 'bg-gray-200' : 'bg-dark-600'}`} />
-      <div className="w-2 h-2 rounded-full bg-gold-500 flex-shrink-0" />
+      <div className="flex items-center justify-center gap-2 mt-3">
+        <div className={`w-12 h-px ${light ? 'bg-gray-300' : 'bg-dark-600'}`} />
+        <div className="w-2 h-2 rounded-full bg-gold-500 flex-shrink-0" />
+        <div className={`w-12 h-px ${light ? 'bg-gray-300' : 'bg-dark-600'}`} />
+      </div>
     </div>
   )
 }
