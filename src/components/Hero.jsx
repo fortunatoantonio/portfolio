@@ -73,8 +73,8 @@ export default function Hero() {
           <span className="text-gold-400 block italic text-[3.5rem] sm:text-[4rem]">Fortunato</span>
         </h1>
 
-        {/* Ruoli — compatti */}
-        <div className="flex items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm px-3 py-1.5 w-fit mb-5">
+        {/* Ruoli — compatti, centrati su mobile */}
+        <div className="flex items-center justify-center text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm px-3 py-1.5 w-fit mx-auto sm:mx-0 mb-5 text-center">
           <span>{t('hero.role1')}</span>
           <span className="text-white/30 mx-1.5">|</span>
           <span>{t('hero.role2')}</span>

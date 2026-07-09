@@ -34,7 +34,7 @@
     "cta_projects": "View Projects"
   },
   "about": {
-    "title": "Profile",
+    "title": "About Me",
     "p1": "I'm Antonio Fortunato, an Analyst with a strong academic background in Economics and Business (110/110 with honors). I combine business expertise with a technology-driven, analytical mindset.",
     "p2": "I have experience in data analysis, decision-making support, and leveraging technology to improve operational efficiency. During my internship at Diskover Srl, I designed and developed SYRIAS — a web application for time series forecasting based on ARIMA models.",
     "p3": "I'm driven by digital transformation and the ability to extract value from data to support strategic decisions."
@@ -94,7 +94,7 @@
     ]
   },
   "projects": {
-    "title": "University Projects",
+    "title": "Project Works",
     "view_github": "View on GitHub",
     "items": [
       {

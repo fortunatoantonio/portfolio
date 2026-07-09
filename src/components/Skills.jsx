@@ -10,9 +10,9 @@ const BADGE_STYLES = {
 
 function BadgeGroup({ title, items, style }) {
   return (
-    <div>
+    <div className="text-center">
       <h3 className="text-xs font-bold uppercase tracking-widest text-gold-500 mb-3">{title}</h3>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         {items.map((item) => (
           <span key={item} className={`px-3 py-1.5 rounded-sm text-sm font-medium transition-colors ${style}`}>
             {item}
