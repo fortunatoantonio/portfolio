@@ -9,19 +9,44 @@ function CertCard({ cert, delay }) {
   return (
     <div
       ref={ref}
-      className="fade-up bg-dark-800 border border-dark-600 rounded-sm p-6 hover:border-gold-500/40 transition-colors"
+      className="fade-up bg-dark-800 border border-dark-600 rounded-sm overflow-hidden hover:border-gold-500/40 transition-colors flex flex-col"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-10 h-10 rounded-sm bg-dark-700 border border-dark-600 flex items-center justify-center mb-4" aria-hidden="true">
-        <svg className="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
+      {/* Banner image */}
+      {cert.image && (
+        <div className="w-full h-36 overflow-hidden">
+          <img
+            src={cert.image}
+            alt={cert.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="font-bold text-white text-sm mb-1">{cert.name}</h3>
+        <p className="text-xs text-gold-400 font-semibold mb-2 uppercase tracking-wider">
+          {cert.issuer}
+        </p>
+        <p className="text-muted-400 text-xs leading-relaxed flex-1">{cert.description}</p>
+
+        {/* Link verifica */}
+        {cert.url && (
+          <a
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-400 hover:text-gold-300 transition-colors mt-3"
+          >
+            {t('certifications.verify')}
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        )}
       </div>
-      <h3 className="font-bold text-white text-base mb-1">{cert.name}</h3>
-      <p className="text-xs text-gold-400 font-semibold mb-3 uppercase tracking-wider">
-        {t('certifications.issued_by')}: {cert.issuer}
-      </p>
-      <p className="text-muted-400 text-sm leading-relaxed">{cert.description}</p>
     </div>
   )
 }
