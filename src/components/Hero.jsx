@@ -80,8 +80,8 @@ export default function Hero() {
       {/* ═══════════════════════════════════════════════════════════
           FULL DESKTOP LAYOUT (1024px+): bio, CTA, feature cards
       ═══════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:pl-12 xl:pl-16 w-full pt-28 pb-16 hidden lg:block">
-        <div className="max-w-md">
+      <div className="relative z-10 w-full pl-8 sm:pl-12 lg:pl-16 xl:pl-20 pr-4 pt-28 pb-16 hidden lg:block">
+        <div className="max-w-sm">
 
           {/* ── Nome, bio, CTA — senza colonna destra ── */}
           <div ref={leftRef} className="fade-up">
