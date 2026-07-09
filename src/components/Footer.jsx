@@ -140,39 +140,46 @@ export default function Footer() {
             </form>
           </div>
 
-          {/* ── Right: Navigation ── */}
+          {/* ── Right: Navigation + Contatti side by side ── */}
           <div className="text-left md:text-right">
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold-400 mb-5">
-              {t('footer.navigation')}
-            </h3>
-            <nav className="flex flex-col gap-2.5">
-              {NAV_LINKS.map((key) => (
-                <a
-                  key={key}
-                  href={`#${key}`}
-                  className="text-sm text-muted-400 hover:text-white transition-colors"
-                >
-                  {t(`nav.${key}`)}
-                </a>
-              ))}
-            </nav>
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-0">
+              {/* Navigation */}
+              <div>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold-400 mb-5">
+                  {t('footer.navigation')}
+                </h3>
+                <nav className="flex flex-col gap-2.5">
+                  {NAV_LINKS.map((key) => (
+                    <a
+                      key={key}
+                      href={`#${key}`}
+                      className="text-sm text-muted-400 hover:text-white transition-colors"
+                    >
+                      {t(`nav.${key}`)}
+                    </a>
+                  ))}
+                </nav>
+              </div>
 
-            {/* Connect section */}
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold-400 mb-4 mt-10">
-              {t('footer.connect')}
-            </h3>
-            <div className="flex flex-col gap-2.5">
-              {SOCIALS.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target={s.href.startsWith('http') ? '_blank' : undefined}
-                  rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="text-sm text-muted-400 hover:text-white transition-colors"
-                >
-                  {s.label}
-                </a>
-              ))}
+              {/* Contatti */}
+              <div>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold-400 mb-5 md:mt-10">
+                  {t('footer.connect')}
+                </h3>
+                <div className="flex flex-col gap-2.5">
+                  {SOCIALS.map((s) => (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target={s.href.startsWith('http') ? '_blank' : undefined}
+                      rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-sm text-muted-400 hover:text-white transition-colors"
+                    >
+                      {s.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
