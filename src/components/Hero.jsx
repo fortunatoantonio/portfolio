@@ -86,6 +86,20 @@ export default function Hero() {
         <p className="text-muted-300 text-sm leading-relaxed max-w-sm">
           {t('hero.mobile_tagline')}
         </p>
+
+        {/* CTA Scarica CV — in basso a destra su mobile */}
+        <div className="mt-6 flex justify-end">
+          <a
+            href="/portfolio/antonio_fortunato_cv.pdf"
+            download
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 text-dark-900 text-xs font-bold rounded-sm hover:bg-gold-400 transition-colors"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            {t('hero.cta_cv')}
+          </a>
+        </div>
       </div>
 
       {/* ═══════════════════════════════════════════════════════════
@@ -112,10 +126,10 @@ export default function Hero() {
               <span>{t('hero.role3')}</span>
             </div>
 
-            {/* Bio formattata */}
-            <p className="text-muted-300 text-base leading-relaxed mb-10 text-justify"
-               dangerouslySetInnerHTML={{ __html: t('hero.bio_html') }}
-            />
+            {/* Bio — tagline pulita */}
+            <p className="text-muted-300 text-base leading-relaxed mb-10">
+              {t('hero.mobile_tagline')}
+            </p>
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
@@ -130,10 +144,10 @@ export default function Hero() {
                 {t('hero.cta_cv')}
               </a>
               <a
-                href="#projects"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
               >
-                {t('hero.cta_projects')}
+                {t('hero.cta_contact')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

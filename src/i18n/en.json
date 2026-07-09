@@ -31,6 +31,7 @@
     "feat3_desc": "I turn data into concrete value for companies and professionals.",
     "mobile_tagline": "Economics, data and technology driving decisions.",
     "cta_cv": "Download CV",
+    "cta_contact": "Contact Me",
     "cta_projects": "View Projects"
   },
   "about": {
@@ -198,7 +199,7 @@
     "built_with": "Built with React + Vite + Tailwind",
     "rights": "All rights reserved.",
     "navigation": "Navigation",
-    "connect": "Connect",
+    "connect": "Contacts",
     "role_line": "Analyst · Economist",
     "location": "Puglia — Italia"
   }

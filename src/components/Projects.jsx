@@ -171,7 +171,7 @@ function ProjectCard({ project, index, delay }) {
       target="_blank"
       rel="noopener noreferrer"
       ref={ref}
-      className="fade-up bg-dark-800 border border-dark-600 rounded-sm overflow-hidden flex flex-col hover:border-gold-500/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+      className="fade-up bg-dark-800 border border-dark-600 rounded-sm overflow-hidden flex flex-col hover:border-gold-500/50 hover:scale-[1.03] transition-all duration-300 group cursor-pointer"
       style={{ transitionDelay: `${delay}ms` }}
       aria-label={project.name}
     >
@@ -211,7 +211,7 @@ export default function Projects() {
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('projects.title')} />
         </div>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {items.map((project, idx) => (
             <ProjectCard key={project.name} project={project} index={idx} delay={idx * 80} />
           ))}

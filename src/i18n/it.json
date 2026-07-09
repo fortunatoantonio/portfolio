@@ -31,6 +31,7 @@
     "feat3_desc": "Trasformo i dati in valore concreto per aziende e professionisti.",
     "mobile_tagline": "Economia, dati e tecnologia al servizio delle decisioni.",
     "cta_cv": "Scarica CV",
+    "cta_contact": "Contattami",
     "cta_projects": "Vedi Progetti"
   },
   "about": {
@@ -198,7 +199,7 @@
     "built_with": "Fatto con React + Vite + Tailwind",
     "rights": "Tutti i diritti riservati.",
     "navigation": "Navigazione",
-    "connect": "Connetti",
+    "connect": "Contatti",
     "role_line": "Analyst · Economista",
     "location": "Puglia — Italia"
   }
