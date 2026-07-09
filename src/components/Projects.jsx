@@ -7,7 +7,7 @@ import { SectionTitle } from './About'
 // 1. SYRIAS — scritta "SYRIAS" su sfondo light
 function GraphicSyrias() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#f0f4ff" />
       <rect x="20" y="20" width="260" height="60" rx="6" fill="#e8eeff" stroke="#3b82f6" strokeWidth="0.5" />
       <text x="150" y="58" textAnchor="middle" fontFamily="monospace" fontSize="28" fontWeight="bold" fill="#1e3a8a" letterSpacing="4">SYRIAS</text>
@@ -20,7 +20,7 @@ function GraphicSyrias() {
 // 2. forecast-ftse — serie temporale a zig-zag
 function GraphicTimeSeries() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#f0f9ff" />
       {/* Grid lines */}
       <line x1="30" y1="85" x2="280" y2="85" stroke="#cbd5e1" strokeWidth="0.5" />
@@ -41,7 +41,7 @@ function GraphicTimeSeries() {
 // 3. presentazione-flask — pacchetto Python (scatola con logo serpente)
 function GraphicFlask() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#fff7ed" />
       {/* Package box */}
       <rect x="110" y="15" width="80" height="70" rx="8" fill="#fed7aa" stroke="#f97316" strokeWidth="1.5" />
@@ -59,7 +59,7 @@ function GraphicFlask() {
 // 4. statistical_reg — linea di regressione con osservazioni
 function GraphicRegression() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#f0fdf4" />
       {/* Axes */}
       <line x1="40" y1="85" x2="275" y2="85" stroke="#86efac" strokeWidth="1" />
@@ -84,7 +84,7 @@ function GraphicRegression() {
 // 5. TIME-SERIES (gold) — lingotto d'oro
 function GraphicGold() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#fefce8" />
       {/* Gold bar 3D effect */}
       <polygon points="110,70 130,40 200,40 220,70" fill="#eab308" />
@@ -103,7 +103,7 @@ function GraphicGold() {
 // 6. tree — albero di classificazione
 function GraphicTree() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#f0fdf4" />
       {/* Tree edges */}
       <line x1="150" y1="20" x2="90" y2="50" stroke="#16a34a" strokeWidth="1.5" />
@@ -129,7 +129,7 @@ function GraphicTree() {
 // 7. SOLVER-OPTIMIZATION — estrazione mineraria
 function GraphicMining() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-24 rounded-t-sm" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
       <rect width="300" height="100" fill="#f5f0e8" />
       {/* Mountain / mine */}
       <polygon points="80,85 150,25 220,85" fill="#d4a574" opacity="0.5" />

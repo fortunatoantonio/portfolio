@@ -57,7 +57,7 @@ export default function Navbar() {
         scrolled ? 'bg-dark-950/95 backdrop-blur-sm shadow-lg shadow-black/30' : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
+      <nav className="max-w-[1400px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
 
         {/* Logo — sempre iniziali AF */}
         <a href="#hero" className="flex-shrink-0 hover:opacity-80 transition-opacity">
@@ -67,7 +67,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop: nav links — solo xl+ */}
-        <div className="hidden xl:flex items-center gap-5">
+        <div className="hidden xl:flex items-center gap-6">
           {NAV_LINKS.map((key) => (
             <a
               key={key}

@@ -196,6 +196,10 @@
   },
   "footer": {
     "built_with": "Fatto con React + Vite + Tailwind",
-    "rights": "Tutti i diritti riservati."
+    "rights": "Tutti i diritti riservati.",
+    "navigation": "Navigazione",
+    "connect": "Connetti",
+    "role_line": "Analyst · Economista",
+    "location": "Puglia — Italia"
   }
 }

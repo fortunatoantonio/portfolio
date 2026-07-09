@@ -196,6 +196,10 @@
   },
   "footer": {
     "built_with": "Built with React + Vite + Tailwind",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "role_line": "Analyst · Economist",
+    "location": "Puglia — Italia"
   }
 }

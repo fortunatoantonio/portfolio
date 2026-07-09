@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="12" fill="#1a2c5b"/>
+  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
   <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800" fill="#6272d8">
+        font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800" fill="#e8c547">
     AF
   </text>
 </svg>
