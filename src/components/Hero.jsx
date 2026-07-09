@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-end md:items-center overflow-hidden"
+      className="relative min-h-screen flex items-end lg:items-center overflow-hidden"
     >
       {/* Background image */}
       <div
@@ -48,33 +48,33 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* ── Mobile overlay: gradiente dal basso per leggibilità nome ── */}
+      {/* ── Clean layout overlay: gradiente dal basso (sotto 1024px) ── */}
       <div
-        className="absolute inset-0 md:hidden"
-        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0.95) 100%)' }}
+        className="absolute inset-0 lg:hidden"
+        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.95) 100%)' }}
         aria-hidden="true"
       />
 
-      {/* ── Desktop overlay: gradiente laterale come prima ── */}
+      {/* ── Desktop overlay: gradiente laterale (1024px+) ── */}
       <div
-        className="absolute inset-0 hidden md:block"
+        className="absolute inset-0 hidden lg:block"
         style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.92) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.25) 100%)' }}
         aria-hidden="true"
       />
 
       {/* ═══════════════════════════════════════════════════════════
-          MOBILE LAYOUT: solo nome + ruoli + scroll indicator
-          Pulito come Savino Novelli — la foto parla da sola
+          CLEAN LAYOUT (< 1024px): foto + nome + ruoli + tagline
+          La foto è protagonista — niente confusione
       ═══════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 w-full px-5 pb-20 pt-32 md:hidden">
+      <div className="relative z-10 w-full px-5 pb-20 pt-32 lg:hidden">
         {/* Nome grande elegante */}
-        <h1 className="text-[3.2rem] leading-[0.9] font-black mb-4">
+        <h1 className="text-[3rem] sm:text-[3.5rem] leading-[0.9] font-black mb-4">
           <span className="text-white block">Antonio</span>
-          <span className="text-gold-400 block italic text-[3.8rem]">Fortunato</span>
+          <span className="text-gold-400 block italic text-[3.5rem] sm:text-[4rem]">Fortunato</span>
         </h1>
 
         {/* Ruoli — compatti */}
-        <div className="flex items-center text-[10px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm px-3 py-1.5 w-fit mb-6">
+        <div className="flex items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm px-3 py-1.5 w-fit mb-5">
           <span>{t('hero.role1')}</span>
           <span className="text-white/30 mx-1.5">|</span>
           <span>{t('hero.role2')}</span>
@@ -82,23 +82,23 @@ export default function Hero() {
           <span>{t('hero.role3')}</span>
         </div>
 
-        {/* Breve sottotitolo — solo una riga essenziale */}
-        <p className="text-muted-300 text-sm leading-relaxed max-w-xs">
+        {/* Tagline breve */}
+        <p className="text-muted-300 text-sm leading-relaxed max-w-sm">
           {t('hero.mobile_tagline')}
         </p>
       </div>
 
       {/* ═══════════════════════════════════════════════════════════
-          DESKTOP LAYOUT: completo con bio, CTA, feature cards
+          FULL DESKTOP LAYOUT (1024px+): bio, CTA, feature cards
       ═══════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20 pb-16 hidden md:block">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20 pb-16 hidden lg:block">
+        <div className="flex flex-row items-center justify-between gap-16">
 
           {/* ── Colonna sinistra: nome, bio, CTA ── */}
           <div ref={leftRef} className="fade-up max-w-md flex-shrink-0">
 
-            {/* Nome — più grande e elegante su desktop */}
-            <h1 className="text-7xl lg:text-8xl font-black leading-[0.9] mb-5">
+            {/* Nome */}
+            <h1 className="text-7xl xl:text-8xl font-black leading-[0.9] mb-5">
               <span className="text-white block">Antonio</span>
               <span className="text-gold-400 block italic">Fortunato</span>
             </h1>
@@ -112,7 +112,7 @@ export default function Hero() {
               <span>{t('hero.role3')}</span>
             </div>
 
-            {/* Bio formattata — giustificata */}
+            {/* Bio formattata */}
             <p className="text-muted-300 text-base leading-relaxed mb-10 text-justify"
                dangerouslySetInnerHTML={{ __html: t('hero.bio_html') }}
             />
@@ -143,7 +143,7 @@ export default function Hero() {
           </div>
 
           {/* ── Colonna destra: 3 feature cards verticali ── */}
-          <div ref={rightRef} className="fade-up flex flex-col justify-center gap-4 w-full lg:w-72 lg:self-center">
+          <div ref={rightRef} className="fade-up flex flex-col justify-center gap-4 w-72 self-center">
             {FEATURES.map((f, i) => (
               <div
                 key={i}
