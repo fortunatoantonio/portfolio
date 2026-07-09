@@ -75,9 +75,6 @@ export default function Footer() {
 
           {/* ── Left: Contact form ── */}
           <div className="md:col-span-2 text-left">
-            <p className="text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-4">
-              {t('contact.eyebrow')}
-            </p>
             <h2 className="text-3xl sm:text-4xl font-black text-white mb-8">
               {t('contact.title')}
             </h2>
@@ -110,7 +107,7 @@ export default function Footer() {
                 </label>
                 <textarea id="f_message" name="message" rows={4}
                   placeholder={t('contact.message_placeholder')}
-                  className={errors.message ? inputError : inputNormal}
+                  className={`resize-none ${errors.message ? inputError : inputNormal}`}
                   aria-invalid={!!errors.message} />
               </div>
 

@@ -65,7 +65,7 @@ export default function Hero() {
             {t('hero.cta_contact')}
           </a>
           <a
-            href="/portfolio/antonio_fortunato_cv.pdf"
+            href="/portfolio/CV3.pdf"
             download
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 text-dark-900 text-xs font-bold rounded-sm hover:bg-gold-400 transition-colors"
           >
@@ -109,7 +109,7 @@ export default function Hero() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="/portfolio/antonio_fortunato_cv.pdf"
+                href="/portfolio/CV3.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
               >
