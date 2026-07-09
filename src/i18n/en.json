@@ -144,21 +144,21 @@
         "issuer": "Accenture (FutureLearn)",
         "description": "Digital skills applied to marketing: SEO, social media strategy, digital advertising and performance analytics.",
         "url": "https://www.futurelearn.com/certificates/2i9lrt0",
-        "image": "/portfolio/cert-marketing.webp"
+        "image": "/portfolio/cert-marketing.svg"
       },
       {
         "name": "Digital Skills for Work and Life",
         "issuer": "Accenture (FutureLearn)",
         "description": "Digital skills for the workplace: productivity, digital collaboration, cloud tools and cybersecurity.",
         "url": "https://www.futurelearn.com/certificates/92yu83u",
-        "image": "/portfolio/cert-work.webp"
+        "image": "/portfolio/cert-work.svg"
       },
       {
         "name": "Digital Skills: Social Media",
         "issuer": "Accenture (FutureLearn)",
         "description": "Strategies and techniques for professional management of corporate social media and personal branding.",
         "url": "https://www.futurelearn.com/certificates/92yu83u",
-        "image": "/portfolio/cert-social.webp"
+        "image": "/portfolio/cert-social.svg"
       }
     ]
   },

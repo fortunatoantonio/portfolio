@@ -59,12 +59,19 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
 
-        {/* Nome */}
-        <a href="#hero" className="font-bold text-base xl:text-lg text-white hover:text-gold-400 transition-colors tracking-tight flex-shrink-0">
-          Antonio Fortunato
+        {/* Nome intero su desktop xl, iniziali "AF" cerchietto sotto xl */}
+        <a href="#hero" className="flex-shrink-0 hover:opacity-80 transition-opacity">
+          {/* Full name — solo xl+ */}
+          <span className="hidden xl:inline font-bold text-lg text-white tracking-tight">
+            Antonio Fortunato
+          </span>
+          {/* Iniziali cerchietto — sotto xl */}
+          <span className="xl:hidden w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-dark-900 font-bold text-xs">
+            AF
+          </span>
         </a>
 
-        {/* Desktop: nav links — solo visibili da xl (1280px) in su */}
+        {/* Desktop: nav links — solo xl+ */}
         <div className="hidden xl:flex items-center gap-5">
           {NAV_LINKS.map((key) => (
             <a
@@ -77,8 +84,9 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop: social icons + language toggle — solo da xl */}
-        <div className="hidden xl:flex items-center gap-3 flex-shrink-0">
+        {/* Desktop xl+: divisore | social | divisore | lang */}
+        <div className="hidden xl:flex items-center gap-2.5 flex-shrink-0">
+          <div className="w-px h-4 bg-white/20" />
           {SOCIAL_ICONS.map((s) => (
             <a
               key={s.label}
@@ -91,12 +99,13 @@ export default function Navbar() {
               {s.icon}
             </a>
           ))}
-          <div className="w-px h-4 bg-white/20 mx-1" />
+          <div className="w-px h-4 bg-white/20" />
           <LanguageToggle />
         </div>
 
-        {/* Tablet/Mobile: social + lang + hamburger — visibile sotto xl */}
+        {/* Sotto xl: divisore | social | divisore | lang | hamburger */}
         <div className="flex xl:hidden items-center gap-2">
+          <div className="w-px h-4 bg-white/20" />
           {SOCIAL_ICONS.map((s) => (
             <a
               key={s.label}
@@ -109,6 +118,7 @@ export default function Navbar() {
               {s.icon}
             </a>
           ))}
+          <div className="w-px h-4 bg-white/20" />
           <LanguageToggle />
           <button
             onClick={() => setMenuOpen((v) => !v)}
@@ -129,7 +139,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Dropdown menu — visibile sotto xl */}
+      {/* Dropdown */}
       {menuOpen && (
         <div className="xl:hidden bg-dark-950 border-t border-dark-700 px-4 py-4 flex flex-col gap-3">
           {NAV_LINKS.map((key) => (

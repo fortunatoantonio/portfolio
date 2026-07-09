@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" fill="none">
+  <rect width="400" height="140" fill="#1a1a1a"/>
+  <!-- Geometric accent -->
+  <path d="M0 80 L100 30 L200 70 L300 20 L400 60" stroke="#e8c547" stroke-width="2" opacity="0.5"/>
+  <path d="M0 120 L150 60 L300 100 L400 40" stroke="#f0d060" stroke-width="1.5" opacity="0.3"/>
+  <rect x="300" y="10" width="80" height="80" rx="8" stroke="#e8c547" stroke-width="1" opacity="0.2" fill="none"/>
+  <rect x="20" y="80" width="50" height="50" rx="6" stroke="#f0d060" stroke-width="1" opacity="0.15" fill="none"/>
+  <!-- Icon: laptop/gear -->
+  <rect x="165" y="50" width="70" height="45" rx="4" stroke="#e8c547" stroke-width="2" fill="none"/>
+  <rect x="180" y="95" width="40" height="5" rx="2" fill="#e8c547" opacity="0.6"/>
+  <circle cx="200" cy="72" r="10" stroke="#e8c547" stroke-width="1.5" fill="none"/>
+  <circle cx="200" cy="72" r="3" fill="#e8c547"/>
+</svg>
