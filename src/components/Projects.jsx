@@ -2,163 +2,266 @@ import { useTranslation } from 'react-i18next'
 import useIntersectionObserver from '../hooks/useIntersectionObserver'
 import { SectionTitle } from './About'
 
-/* ── SVG Graphics per progetto (by index) ── */
+/* ── Professional SVG Graphics per progetto ── */
 
-// 1. SYRIAS — scritta "SYRIAS" su sfondo light
 function GraphicSyrias() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#f0f4ff" />
-      <rect x="20" y="20" width="260" height="60" rx="6" fill="#e8eeff" stroke="#3b82f6" strokeWidth="0.5" />
-      <text x="150" y="58" textAnchor="middle" fontFamily="monospace" fontSize="28" fontWeight="bold" fill="#1e3a8a" letterSpacing="4">SYRIAS</text>
-      <circle cx="50" cy="80" r="3" fill="#3b82f6" opacity="0.3" />
-      <circle cx="250" cy="25" r="4" fill="#60a5fa" opacity="0.3" />
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="syrias-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#1e293b" />
+          <stop offset="100%" stopColor="#0f172a" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#syrias-bg)" />
+      {/* Terminal window */}
+      <rect x="60" y="30" width="280" height="120" rx="8" fill="#1a1a2e" stroke="#334155" strokeWidth="1" />
+      <circle cx="80" cy="44" r="4" fill="#ef4444" />
+      <circle cx="94" cy="44" r="4" fill="#eab308" />
+      <circle cx="108" cy="44" r="4" fill="#22c55e" />
+      <rect x="70" y="56" width="260" height="1" fill="#334155" />
+      {/* Code lines */}
+      <rect x="80" y="68" width="60" height="6" rx="2" fill="#818cf8" opacity="0.7" />
+      <rect x="148" y="68" width="40" height="6" rx="2" fill="#67e8f9" opacity="0.5" />
+      <rect x="80" y="82" width="80" height="6" rx="2" fill="#a78bfa" opacity="0.6" />
+      <rect x="168" y="82" width="50" height="6" rx="2" fill="#fbbf24" opacity="0.5" />
+      <rect x="80" y="96" width="45" height="6" rx="2" fill="#34d399" opacity="0.6" />
+      <rect x="133" y="96" width="70" height="6" rx="2" fill="#818cf8" opacity="0.4" />
+      {/* SYRIAS text */}
+      <text x="200" y="128" textAnchor="middle" fontFamily="monospace" fontSize="18" fontWeight="bold" fill="#e8c547" letterSpacing="3" opacity="0.9">SYRIAS</text>
+      {/* Decorative dots */}
+      <circle cx="340" cy="140" r="12" fill="#e8c547" opacity="0.08" />
+      <circle cx="60" cy="160" r="8" fill="#818cf8" opacity="0.1" />
     </svg>
   )
 }
 
-// 2. forecast-ftse — serie temporale a zig-zag
 function GraphicTimeSeries() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#f0f9ff" />
-      {/* Grid lines */}
-      <line x1="30" y1="85" x2="280" y2="85" stroke="#cbd5e1" strokeWidth="0.5" />
-      <line x1="30" y1="65" x2="280" y2="65" stroke="#e2e8f0" strokeWidth="0.3" strokeDasharray="4" />
-      <line x1="30" y1="45" x2="280" y2="45" stroke="#e2e8f0" strokeWidth="0.3" strokeDasharray="4" />
-      <line x1="30" y1="25" x2="280" y2="25" stroke="#e2e8f0" strokeWidth="0.3" strokeDasharray="4" />
-      {/* Zig-zag time series */}
-      <polyline points="30,70 55,55 80,62 105,38 130,50 155,30 180,45 205,25 230,40 255,20 280,35" fill="none" stroke="#2563eb" strokeWidth="2.5" strokeLinejoin="round" />
-      {/* Points */}
-      <circle cx="105" cy="38" r="3" fill="#2563eb" />
-      <circle cx="155" cy="30" r="3" fill="#2563eb" />
-      <circle cx="205" cy="25" r="3" fill="#2563eb" />
-      <circle cx="255" cy="20" r="3" fill="#2563eb" />
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="ftse-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#0c1222" />
+          <stop offset="100%" stopColor="#1a1a2e" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#ftse-bg)" />
+      {/* Grid */}
+      <line x1="40" y1="150" x2="380" y2="150" stroke="#1e3a5f" strokeWidth="0.5" />
+      <line x1="40" y1="120" x2="380" y2="120" stroke="#1e3a5f" strokeWidth="0.3" strokeDasharray="4" />
+      <line x1="40" y1="90" x2="380" y2="90" stroke="#1e3a5f" strokeWidth="0.3" strokeDasharray="4" />
+      <line x1="40" y1="60" x2="380" y2="60" stroke="#1e3a5f" strokeWidth="0.3" strokeDasharray="4" />
+      <line x1="40" y1="30" x2="380" y2="30" stroke="#1e3a5f" strokeWidth="0.3" strokeDasharray="4" />
+      {/* Area fill */}
+      <path d="M40,130 70,110 100,120 130,80 160,95 190,60 220,75 250,45 280,55 310,35 340,50 370,40 380,40 380,150 40,150 Z" fill="#2563eb" opacity="0.1" />
+      {/* Line */}
+      <polyline points="40,130 70,110 100,120 130,80 160,95 190,60 220,75 250,45 280,55 310,35 340,50 370,40" fill="none" stroke="#3b82f6" strokeWidth="2.5" strokeLinejoin="round" />
+      {/* Glow points */}
+      <circle cx="190" cy="60" r="4" fill="#3b82f6" />
+      <circle cx="190" cy="60" r="8" fill="#3b82f6" opacity="0.2" />
+      <circle cx="310" cy="35" r="4" fill="#3b82f6" />
+      <circle cx="310" cy="35" r="8" fill="#3b82f6" opacity="0.2" />
+      <circle cx="370" cy="40" r="4" fill="#60a5fa" />
+      {/* Label */}
+      <text x="360" y="25" textAnchor="end" fontFamily="monospace" fontSize="9" fill="#60a5fa" opacity="0.7">FTSE MIB</text>
     </svg>
   )
 }
 
-// 3. presentazione-flask — pacchetto Python (scatola con logo serpente)
 function GraphicFlask() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#fff7ed" />
-      {/* Package box */}
-      <rect x="110" y="15" width="80" height="70" rx="8" fill="#fed7aa" stroke="#f97316" strokeWidth="1.5" />
-      <line x1="150" y1="15" x2="150" y2="85" stroke="#f97316" strokeWidth="0.8" opacity="0.5" />
-      <line x1="110" y1="50" x2="190" y2="50" stroke="#f97316" strokeWidth="0.8" opacity="0.5" />
-      {/* Python-like snake */}
-      <path d="M140 35 Q145 30 150 35 Q155 40 150 45 Q145 50 150 55 Q155 60 160 55" fill="none" stroke="#ea580c" strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="140" cy="35" r="2" fill="#ea580c" />
-      {/* Py text */}
-      <text x="150" y="78" textAnchor="middle" fontFamily="monospace" fontSize="10" fill="#9a3412" fontWeight="bold">Py</text>
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="flask-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#1a1a2e" />
+          <stop offset="100%" stopColor="#16213e" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#flask-bg)" />
+      {/* Flask/beaker shape */}
+      <path d="M170 40 L170 80 L140 140 Q135 155 150 155 L250 155 Q265 155 260 140 L230 80 L230 40" fill="none" stroke="#f97316" strokeWidth="2" />
+      <rect x="165" y="35" width="70" height="10" rx="3" fill="#f97316" opacity="0.3" />
+      {/* Liquid */}
+      <path d="M148 130 Q150 120 165 115 Q200 105 235 115 Q250 120 252 130 L260 140 Q265 155 250 155 L150 155 Q135 155 140 140 Z" fill="#f97316" opacity="0.2" />
+      {/* Bubbles */}
+      <circle cx="180" cy="130" r="4" fill="#fb923c" opacity="0.4" />
+      <circle cx="210" cy="120" r="3" fill="#fdba74" opacity="0.5" />
+      <circle cx="195" cy="140" r="5" fill="#f97316" opacity="0.3" />
+      {/* Python logo hint */}
+      <path d="M290 60 Q295 55 300 60 Q305 65 300 70 Q295 75 300 80" fill="none" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="290" cy="60" r="2.5" fill="#fbbf24" />
+      {/* HTML tags */}
+      <text x="80" y="90" fontFamily="monospace" fontSize="11" fill="#94a3b8" opacity="0.4">&lt;html&gt;</text>
+      <text x="310" y="130" fontFamily="monospace" fontSize="11" fill="#94a3b8" opacity="0.4">&lt;/&gt;</text>
     </svg>
   )
 }
 
-// 4. statistical_reg — linea di regressione con osservazioni
 function GraphicRegression() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#f0fdf4" />
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="reg-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#0a1628" />
+          <stop offset="100%" stopColor="#1a1a2e" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#reg-bg)" />
       {/* Axes */}
-      <line x1="40" y1="85" x2="275" y2="85" stroke="#86efac" strokeWidth="1" />
-      <line x1="40" y1="15" x2="40" y2="85" stroke="#86efac" strokeWidth="1" />
+      <line x1="50" y1="155" x2="370" y2="155" stroke="#334155" strokeWidth="1" />
+      <line x1="50" y1="20" x2="50" y2="155" stroke="#334155" strokeWidth="1" />
+      {/* Confidence interval */}
+      <path d="M55,145 80,135 120,118 160,105 200,88 240,72 280,58 320,42 360,28" fill="none" stroke="#10b981" strokeWidth="0" />
+      <path d="M55,155 80,148 120,135 160,125 200,112 240,98 280,85 320,72 360,58 360,8 320,18 280,32 240,48 200,62 160,78 120,95 80,110 55,125 Z" fill="#10b981" opacity="0.06" />
       {/* Scatter points */}
-      <circle cx="60" cy="72" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="85" cy="65" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="105" cy="58" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="130" cy="60" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="150" cy="48" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="175" cy="42" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="195" cy="45" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="220" cy="35" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="245" cy="28" r="4" fill="#14b8a6" opacity="0.6" />
-      <circle cx="265" cy="22" r="4" fill="#14b8a6" opacity="0.6" />
+      <circle cx="70" cy="138" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="100" cy="125" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="130" cy="118" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="155" cy="108" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="185" cy="95" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="210" cy="88" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="240" cy="78" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="270" cy="62" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="300" cy="52" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="330" cy="42" r="5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="355" cy="30" r="5" fill="#14b8a6" opacity="0.7" />
       {/* Regression line */}
-      <line x1="45" y1="78" x2="275" y2="18" stroke="#059669" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="55" y1="145" x2="365" y2="25" stroke="#10b981" strokeWidth="2.5" strokeDasharray="6 3" />
+      {/* R² label */}
+      <text x="340" y="155" fontFamily="monospace" fontSize="10" fill="#10b981" opacity="0.7">R²=0.94</text>
     </svg>
   )
 }
 
-// 5. TIME-SERIES (gold) — lingotto d'oro
 function GraphicGold() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#fefce8" />
-      {/* Gold bar 3D effect */}
-      <polygon points="110,70 130,40 200,40 220,70" fill="#eab308" />
-      <polygon points="130,40 145,28 215,28 200,40" fill="#facc15" />
-      <polygon points="200,40 215,28 235,58 220,70" fill="#ca8a04" />
-      {/* Shine */}
-      <rect x="140" y="44" width="30" height="4" rx="2" fill="#fef08a" opacity="0.7" />
-      {/* Sparkles */}
-      <text x="90" y="30" fontSize="12" fill="#eab308" opacity="0.6">✦</text>
-      <text x="240" y="45" fontSize="10" fill="#eab308" opacity="0.5">✦</text>
-      <text x="160" y="22" fontSize="8" fill="#fbbf24" opacity="0.4">✦</text>
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="gold-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#1a1508" />
+          <stop offset="100%" stopColor="#0f0d08" />
+        </linearGradient>
+        <linearGradient id="gold-bar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fbbf24" />
+          <stop offset="100%" stopColor="#b45309" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#gold-bg)" />
+      {/* Gold candlestick chart background */}
+      <line x1="60" y1="160" x2="360" y2="160" stroke="#3d2f0a" strokeWidth="0.5" />
+      <line x1="60" y1="130" x2="360" y2="130" stroke="#3d2f0a" strokeWidth="0.3" strokeDasharray="3" />
+      <line x1="60" y1="100" x2="360" y2="100" stroke="#3d2f0a" strokeWidth="0.3" strokeDasharray="3" />
+      {/* Candlesticks */}
+      <rect x="80" y="100" width="8" height="40" fill="#eab308" opacity="0.8" />
+      <line x1="84" y1="90" x2="84" y2="150" stroke="#eab308" strokeWidth="1" />
+      <rect x="110" y="110" width="8" height="30" fill="#dc2626" opacity="0.6" />
+      <line x1="114" y1="100" x2="114" y2="150" stroke="#dc2626" strokeWidth="1" />
+      <rect x="140" y="80" width="8" height="50" fill="#eab308" opacity="0.8" />
+      <line x1="144" y1="70" x2="144" y2="140" stroke="#eab308" strokeWidth="1" />
+      <rect x="170" y="60" width="8" height="55" fill="#eab308" opacity="0.8" />
+      <line x1="174" y1="50" x2="174" y2="125" stroke="#eab308" strokeWidth="1" />
+      <rect x="200" y="70" width="8" height="40" fill="#dc2626" opacity="0.6" />
+      <line x1="204" y1="55" x2="204" y2="120" stroke="#dc2626" strokeWidth="1" />
+      <rect x="230" y="50" width="8" height="60" fill="#eab308" opacity="0.8" />
+      <line x1="234" y1="40" x2="234" y2="120" stroke="#eab308" strokeWidth="1" />
+      <rect x="260" y="40" width="8" height="50" fill="#eab308" opacity="0.8" />
+      <line x1="264" y1="30" x2="264" y2="100" stroke="#eab308" strokeWidth="1" />
+      {/* Gold price trend line */}
+      <polyline points="84,100 114,110 144,80 174,60 204,70 234,50 264,40 300,35 340,30" fill="none" stroke="#fbbf24" strokeWidth="1.5" opacity="0.5" />
+      {/* Label */}
+      <text x="320" y="50" fontFamily="monospace" fontSize="10" fill="#eab308" opacity="0.6">XAU/USD</text>
     </svg>
   )
 }
 
-// 6. tree — albero di classificazione
 function GraphicTree() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#f0fdf4" />
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="tree-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#0a1628" />
+          <stop offset="100%" stopColor="#0f1f14" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#tree-bg)" />
       {/* Tree edges */}
-      <line x1="150" y1="20" x2="90" y2="50" stroke="#16a34a" strokeWidth="1.5" />
-      <line x1="150" y1="20" x2="210" y2="50" stroke="#16a34a" strokeWidth="1.5" />
-      <line x1="90" y1="50" x2="60" y2="78" stroke="#16a34a" strokeWidth="1.5" />
-      <line x1="90" y1="50" x2="120" y2="78" stroke="#16a34a" strokeWidth="1.5" />
-      <line x1="210" y1="50" x2="180" y2="78" stroke="#16a34a" strokeWidth="1.5" />
-      <line x1="210" y1="50" x2="240" y2="78" stroke="#16a34a" strokeWidth="1.5" />
-      {/* Root node */}
-      <circle cx="150" cy="20" r="10" fill="#bbf7d0" stroke="#16a34a" strokeWidth="1.5" />
-      {/* Internal nodes */}
-      <circle cx="90" cy="50" r="8" fill="#dcfce7" stroke="#22c55e" strokeWidth="1.5" />
-      <circle cx="210" cy="50" r="8" fill="#dcfce7" stroke="#22c55e" strokeWidth="1.5" />
-      {/* Leaf nodes */}
-      <rect x="50" y="72" width="20" height="12" rx="3" fill="#4ade80" />
-      <rect x="110" y="72" width="20" height="12" rx="3" fill="#f87171" />
-      <rect x="170" y="72" width="20" height="12" rx="3" fill="#4ade80" />
-      <rect x="230" y="72" width="20" height="12" rx="3" fill="#f87171" />
+      <line x1="200" y1="25" x2="120" y2="65" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="200" y1="25" x2="280" y2="65" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="120" y1="65" x2="75" y2="110" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="120" y1="65" x2="165" y2="110" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="280" y1="65" x2="235" y2="110" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="280" y1="65" x2="325" y2="110" stroke="#22c55e" strokeWidth="1.5" opacity="0.6" />
+      <line x1="75" y1="110" x2="50" y2="150" stroke="#22c55e" strokeWidth="1" opacity="0.4" />
+      <line x1="75" y1="110" x2="100" y2="150" stroke="#22c55e" strokeWidth="1" opacity="0.4" />
+      <line x1="325" y1="110" x2="300" y2="150" stroke="#22c55e" strokeWidth="1" opacity="0.4" />
+      <line x1="325" y1="110" x2="350" y2="150" stroke="#22c55e" strokeWidth="1" opacity="0.4" />
+      {/* Root */}
+      <circle cx="200" cy="25" r="14" fill="#166534" stroke="#22c55e" strokeWidth="2" />
+      <text x="200" y="30" textAnchor="middle" fontSize="9" fill="#86efac" fontWeight="bold">X1</text>
+      {/* Internal */}
+      <circle cx="120" cy="65" r="11" fill="#14532d" stroke="#16a34a" strokeWidth="1.5" />
+      <text x="120" y="69" textAnchor="middle" fontSize="8" fill="#4ade80">X2</text>
+      <circle cx="280" cy="65" r="11" fill="#14532d" stroke="#16a34a" strokeWidth="1.5" />
+      <text x="280" y="69" textAnchor="middle" fontSize="8" fill="#4ade80">X3</text>
+      {/* Decision nodes */}
+      <circle cx="75" cy="110" r="9" fill="#1a2e1a" stroke="#15803d" strokeWidth="1" />
+      <circle cx="165" cy="110" r="9" fill="#1a2e1a" stroke="#15803d" strokeWidth="1" />
+      <circle cx="235" cy="110" r="9" fill="#1a2e1a" stroke="#15803d" strokeWidth="1" />
+      <circle cx="325" cy="110" r="9" fill="#1a2e1a" stroke="#15803d" strokeWidth="1" />
+      {/* Leaves */}
+      <rect x="38" y="144" width="24" height="14" rx="4" fill="#22c55e" opacity="0.8" />
+      <rect x="88" y="144" width="24" height="14" rx="4" fill="#ef4444" opacity="0.7" />
+      <rect x="288" y="144" width="24" height="14" rx="4" fill="#22c55e" opacity="0.8" />
+      <rect x="338" y="144" width="24" height="14" rx="4" fill="#ef4444" opacity="0.7" />
+      {/* Labels */}
+      <text x="50" y="155" textAnchor="middle" fontSize="7" fill="white">A</text>
+      <text x="100" y="155" textAnchor="middle" fontSize="7" fill="white">B</text>
+      <text x="300" y="155" textAnchor="middle" fontSize="7" fill="white">A</text>
+      <text x="350" y="155" textAnchor="middle" fontSize="7" fill="white">B</text>
     </svg>
   )
 }
 
-// 7. SOLVER-OPTIMIZATION — estrazione mineraria
 function GraphicMining() {
   return (
-    <svg viewBox="0 0 300 100" className="w-full h-36 rounded-t-sm" preserveAspectRatio="none">
-      <rect width="300" height="100" fill="#f5f0e8" />
-      {/* Mountain / mine */}
-      <polygon points="80,85 150,25 220,85" fill="#d4a574" opacity="0.5" />
-      <polygon points="120,85 165,40 210,85" fill="#92400e" opacity="0.4" />
-      {/* Mine entrance */}
-      <rect x="140" y="60" width="30" height="25" rx="2" fill="#451a03" />
-      <path d="M140 60 Q155 50 170 60" fill="#78350f" />
-      {/* Pickaxe */}
-      <line x1="220" y1="75" x2="250" y2="45" stroke="#78350f" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M248 42 L260 38 L254 50 Z" fill="#6b7280" />
-      {/* Cart rail */}
-      <line x1="100" y1="87" x2="200" y2="87" stroke="#78350f" strokeWidth="1.5" />
-      {/* Cart */}
-      <rect x="105" y="78" width="20" height="10" rx="2" fill="#a16207" />
-      <circle cx="110" cy="90" r="3" fill="#374151" />
-      <circle cx="120" cy="90" r="3" fill="#374151" />
+    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="mine-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#1a1508" />
+          <stop offset="100%" stopColor="#1a1a1a" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="180" fill="url(#mine-bg)" />
+      {/* Optimization curve */}
+      <line x1="50" y1="155" x2="370" y2="155" stroke="#4a3810" strokeWidth="1" />
+      <line x1="50" y1="20" x2="50" y2="155" stroke="#4a3810" strokeWidth="1" />
+      {/* Extraction curve (Hotelling) */}
+      <path d="M60,40 C100,42 140,50 180,70 C220,90 260,118 310,140 C340,150 360,153 370,154" fill="none" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" />
+      {/* Reserve depletion curve */}
+      <path d="M60,150 C100,148 140,140 180,120 C220,100 260,70 310,45 C340,35 360,32 370,30" fill="none" stroke="#dc2626" strokeWidth="1.5" strokeDasharray="5 3" opacity="0.7" />
+      {/* Intersection point */}
+      <circle cx="220" cy="95" r="6" fill="none" stroke="#fbbf24" strokeWidth="2" />
+      <circle cx="220" cy="95" r="2.5" fill="#fbbf24" />
+      {/* Axis labels */}
+      <text x="210" y="170" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#a16207" opacity="0.7">Time (t)</text>
+      <text x="35" y="90" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#a16207" opacity="0.7" transform="rotate(-90 35 90)">q(t)</text>
+      {/* Legend */}
+      <rect x="280" y="20" width="12" height="3" rx="1" fill="#eab308" />
+      <text x="298" y="24" fontFamily="monospace" fontSize="7" fill="#d4a574">Extraction</text>
+      <rect x="280" y="32" width="12" height="3" rx="1" fill="#dc2626" opacity="0.7" />
+      <text x="298" y="36" fontFamily="monospace" fontSize="7" fill="#d4a574">Reserve</text>
     </svg>
   )
 }
 
-// Map project index to graphic
 const GRAPHICS = [
-  GraphicSyrias,       // 0: SYRIAS
-  GraphicTimeSeries,   // 1: forecast-ftse
-  GraphicFlask,        // 2: presentazione-flask
-  GraphicRegression,   // 3: statistical_reg
-  GraphicGold,         // 4: TIME-SERIES (gold)
-  GraphicTree,         // 5: tree
-  GraphicMining,       // 6: SOLVER-OPTIMIZATION
+  GraphicSyrias,
+  GraphicTimeSeries,
+  GraphicFlask,
+  GraphicRegression,
+  GraphicGold,
+  GraphicTree,
+  GraphicMining,
 ]
 
 function ProjectCard({ project, index, delay }) {
@@ -175,9 +278,7 @@ function ProjectCard({ project, index, delay }) {
       style={{ transitionDelay: `${delay}ms` }}
       aria-label={project.name}
     >
-      {/* Custom graphic */}
       <Graphic />
-
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-bold text-white text-sm leading-snug group-hover:text-gold-400 transition-colors">{project.name}</h3>
@@ -185,10 +286,7 @@ function ProjectCard({ project, index, delay }) {
             {project.lang}
           </span>
         </div>
-
         <p className="text-muted-400 text-xs leading-relaxed flex-1">{project.description}</p>
-
-        {/* GitHub icon only */}
         <div className="flex items-center mt-auto">
           <svg className="w-5 h-5 text-muted-400 group-hover:text-gold-400 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
@@ -207,7 +305,7 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-16 sm:py-20 px-4 sm:px-8 bg-dark-950">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" aria-hidden="true" />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('projects.title')} />
         </div>

@@ -67,14 +67,16 @@ export default function Navbar() {
         </a>
 
         {/* Desktop: nav links — solo xl+ */}
-        <div className="hidden xl:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-7 ml-auto mr-6">
           {NAV_LINKS.map((key) => (
             <a
               key={key}
               href={`#${key}`}
-              className="text-[11px] font-semibold text-muted-300 hover:text-gold-400 transition-colors uppercase tracking-wider whitespace-nowrap"
+              className="relative text-[11px] font-medium text-gold-200/80 hover:text-gold-400 transition-colors uppercase tracking-[0.18em] whitespace-nowrap group"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               {t(`nav.${key}`)}
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>

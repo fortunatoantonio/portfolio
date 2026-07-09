@@ -70,7 +70,7 @@ export default function Footer() {
           TOP: 3-column layout — Contact | Navigation | Connect
           On mobile: stacks to single column, centered
       ═══════════════════════════════════════════ */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
 
           {/* ── Left: Contact form ── */}
@@ -183,8 +183,8 @@ export default function Footer() {
           BOTTOM: Copyright bar — Savino style
           Large: left/right. Small: centered
       ═══════════════════════════════════════════ */}
-      <div className="border-t border-dark-800 py-5 px-4 sm:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div className="border-t border-dark-800 py-5 px-6 sm:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <p className="text-dark-500 text-xs">
             © {year} Antonio Fortunato
           </p>
