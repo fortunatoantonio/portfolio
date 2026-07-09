@@ -59,14 +59,9 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
 
-        {/* Nome intero su desktop xl, iniziali "AF" cerchietto sotto xl */}
+        {/* Logo — sempre iniziali AF */}
         <a href="#hero" className="flex-shrink-0 hover:opacity-80 transition-opacity">
-          {/* Full name — solo xl+ */}
-          <span className="hidden xl:inline font-bold text-lg text-white tracking-tight">
-            Antonio Fortunato
-          </span>
-          {/* Iniziali cerchietto — sotto xl */}
-          <span className="xl:hidden w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-dark-900 font-bold text-xs">
+          <span className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-dark-900 font-bold text-xs">
             AF
           </span>
         </a>

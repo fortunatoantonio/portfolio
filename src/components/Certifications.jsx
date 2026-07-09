@@ -14,11 +14,11 @@ function CertCard({ cert, delay }) {
     >
       {/* Banner image — ridotta, mostra tutta la scritta */}
       {cert.image && (
-        <div className="w-full h-20 overflow-hidden bg-dark-700 flex items-center justify-center px-3">
+        <div className="w-full h-24 overflow-hidden">
           <img
             src={cert.image}
             alt={cert.name}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>

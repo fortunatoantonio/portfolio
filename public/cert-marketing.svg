@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" fill="none">
-  <rect width="400" height="140" fill="#1a1a1a"/>
-  <!-- Geometric accent lines -->
-  <path d="M0 70 L80 20 L160 90 L240 30 L320 100 L400 50" stroke="#7c3aed" stroke-width="2" opacity="0.6"/>
-  <path d="M0 100 L100 50 L200 110 L300 40 L400 90" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
-  <circle cx="320" cy="40" r="30" fill="#7c3aed" opacity="0.15"/>
-  <circle cx="80" cy="110" r="20" fill="#a855f7" opacity="0.1"/>
-  <!-- Icon: chart bars -->
-  <rect x="170" y="70" width="12" height="30" rx="2" fill="#e8c547" opacity="0.8"/>
-  <rect x="188" y="55" width="12" height="45" rx="2" fill="#e8c547"/>
-  <rect x="206" y="40" width="12" height="60" rx="2" fill="#e8c547" opacity="0.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140">
+  <rect width="400" height="140" fill="#f5f0e8"/>
+  <path d="M0 100 Q100 60 200 90 T400 70" stroke="#7c3aed" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M0 50 Q150 120 300 40 T400 100" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.25"/>
+  <circle cx="320" cy="35" r="28" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="60" cy="105" r="18" fill="#a855f7" opacity="0.1"/>
+  <rect x="160" y="60" width="14" height="40" rx="3" fill="#e8c547"/>
+  <rect x="180" y="45" width="14" height="55" rx="3" fill="#d4a020"/>
+  <rect x="200" y="30" width="14" height="70" rx="3" fill="#e8c547"/>
+  <rect x="220" y="50" width="14" height="50" rx="3" fill="#d4a020" opacity="0.7"/>
 </svg>
