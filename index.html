@@ -25,6 +25,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // SPA recovery — handles redirect from 404.html
+      (function(){
+        var redirect = sessionStorage.getItem('spa-redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa-redirect');
+          var hash = redirect.split('#')[1];
+          if (hash) window.location.hash = '#' + hash;
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
