@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "Profile",
+    "about": "About",
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
@@ -10,7 +10,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Analyst · Graduated with Honors",
+    "badge": "Analyst · First-Class Honours",
     "greeting": "Welcome to the page of",
     "firstname": "Antonio",
     "lastname": "Fortunato",
@@ -19,26 +19,26 @@
     "role1": "Economist",
     "role2": "Data Analyst",
     "role3": "Quantitative Thinker",
-    "bio_html": "Graduated in <span class='text-white font-semibold'>Economics and Business</span>, with experience in econometric analysis, <span class='text-white font-semibold'>ARIMA</span> modeling and data visualization. I combine analytical rigor and quantitative skills to turn data into <span class='text-gold-400 font-semibold italic'>strategic decisions</span>.",
+    "bio_html": "A <span class='text-white font-semibold'>Master's graduate in Economics</span> with hands-on experience in econometric modelling, <span class='text-white font-semibold'>ARIMA</span> forecasting and data visualisation. I blend analytical rigour with quantitative expertise to turn raw data into <span class='text-gold-400 font-semibold italic'>actionable insight</span>.",
     "typewriter": "Data Analysis · Business Intelligence · Digital Transformation",
-    "bio": "Master's graduate in Economics and Business with strong analytical skills and a keen interest in digital transformation.",
-    "bio_extended": "Graduated in Economics and Business, with experience in econometric analysis, ARIMA modeling and data visualization. I combine analytical rigor and quantitative skills to turn data into strategic decisions.",
+    "bio": "Master's graduate in Economics and Business, passionate about leveraging data and technology for smarter decisions.",
+    "bio_extended": "A Master's graduate in Economics with experience in econometric modelling, ARIMA forecasting and data visualisation. I blend analytical rigour with quantitative expertise to turn raw data into actionable insight.",
     "feat1_title": "Data Analysis & Econometrics",
     "feat1_desc": "ARIMA models, regressions, forecasting and machine learning.",
     "feat2_title": "Business Intelligence",
-    "feat2_desc": "Interactive dashboards, insights and decision support.",
+    "feat2_desc": "Interactive dashboards, actionable insights and decision support.",
     "feat3_title": "Data Driven",
-    "feat3_desc": "I turn data into concrete value for companies and professionals.",
-    "mobile_tagline": "Economics, data and technology driving decisions.",
+    "feat3_desc": "Turning data into tangible value for businesses and professionals.",
+    "mobile_tagline": "Economics, data and technology driving smarter decisions.",
     "cta_cv": "Download CV",
-    "cta_contact": "Contact Me",
+    "cta_contact": "Get in Touch",
     "cta_projects": "View Projects"
   },
   "about": {
-    "title": "About Me",
-    "p1": "Economics, finance and innovation are the pillars of my academic and professional path. With a Master's degree in Economics and Business with honors (110/110), I have developed strong business, analytical and quantitative skills, combined with a keen interest in technology to support decision-making.",
-    "p2": "During my internship at Diskover Srl, I collaborated on projects focused on data analysis and the use of digital tools to improve process efficiency and support decision-making activities.",
-    "p3": "My profile is complemented by interpersonal skills, client orientation and problem-solving aptitude — elements I consider essential for turning data and information into concrete value."
+    "title": "About",
+    "p1": "Economics, finance and innovation form the backbone of my academic and professional journey. Holding a Master's degree in Economics and Business with first-class honours (110/110), I have built a solid foundation in business analysis, quantitative methods and data-driven decision-making.",
+    "p2": "During my internship at Diskover Srl, I worked on projects centred around data analysis and the adoption of digital tools to streamline processes and support strategic decisions.",
+    "p3": "Strong interpersonal skills, a client-first mindset and a natural aptitude for problem-solving round out my profile — qualities I see as essential for turning data into real-world value."
   },
   "skills": {
     "title": "Skills",
@@ -50,21 +50,21 @@
     "tools": ["Excel", "Python", "R", "Flask", "ARIMA / Time Series", "GitHub"]
   },
   "experience": {
-    "title": "Work Experience",
+    "title": "Experience",
     "items": [
       {
-        "role": "Internship — Data Analyst",
+        "role": "Data Analyst Intern",
         "company": "Diskover Srl",
         "location": "Pescara",
-        "period": "October 2025 – December 2025",
-        "description": "Study and presentation of the Flask framework. Design and development of SYRIAS: a web application for time series forecasting based on ARIMA models."
+        "period": "Oct 2025 – Dec 2025",
+        "description": "Studied and presented the Flask framework. Designed and developed SYRIAS — a web application for time-series forecasting built on ARIMA models."
       },
       {
-        "role": "Internship — Accounting & Marketing",
+        "role": "Accounting & Marketing Intern",
         "company": "Pro Loco Tourist Association",
         "location": "Manfredonia",
-        "period": "October 2022 – December 2022",
-        "description": "Administrative, communication and digital marketing activities for the local tourism association."
+        "period": "Oct 2022 – Dec 2022",
+        "description": "Handled administrative tasks, communications and digital marketing campaigns for the local tourism board."
       }
     ]
   },
@@ -72,71 +72,71 @@
     "title": "Education",
     "items": [
       {
-        "degree": "Master's Degree in Economics and Business",
+        "degree": "MSc Economics and Business",
         "institution": "University of Chieti-Pescara",
-        "period": "November 2023 – March 2026",
-        "grade": "110/110 with honors",
+        "period": "Nov 2023 – Mar 2026",
+        "grade": "110/110 with honours",
         "note": ""
       },
       {
-        "degree": "Bachelor's Degree in Business Administration",
+        "degree": "BSc Business Administration",
         "institution": "University of Foggia",
-        "period": "November 2019 – October 2023",
+        "period": "Nov 2019 – Oct 2023",
         "grade": "97/110",
         "note": ""
       },
       {
-        "degree": "Technical Economic Diploma",
+        "degree": "Technical Economics Diploma",
         "institution": "I.T.E. G. Toniolo, Manfredonia",
-        "period": "September 2014 – July 2019",
+        "period": "Sep 2014 – Jul 2019",
         "grade": "80/100",
         "note": ""
       }
     ]
   },
   "projects": {
-    "title": "Project Works",
+    "title": "Projects",
     "view_github": "View on GitHub",
     "items": [
       {
         "name": "SYRIAS",
-        "description": "Web application for time series forecasting based on ARIMA models.",
+        "description": "A web app for time-series forecasting powered by ARIMA models.",
         "lang": "JavaScript",
         "url": "https://github.com/fortunatoantonio/SYRIAS"
       },
       {
         "name": "forecast-ftse",
-        "description": "Time series analysis for FTSE MIB futures.",
+        "description": "Time-series analysis applied to FTSE MIB futures.",
         "lang": "Python",
         "url": "https://github.com/fortunatoantonio/forecast-ftse"
       },
       {
         "name": "presentazione-flask",
-        "description": "Flask explained in HTML: interactive framework presentation.",
+        "description": "An interactive HTML presentation explaining the Flask framework.",
         "lang": "HTML",
         "url": "https://github.com/fortunatoantonio/presentazione-flask"
       },
       {
         "name": "statistical_reg",
-        "description": "Statistical regression analysis in R.",
+        "description": "Statistical regression analysis built in R.",
         "lang": "R",
         "url": "https://github.com/fortunatoantonio/statistical_reg"
       },
       {
         "name": "TIME-SERIES",
-        "description": "Financial market forecasting — gold futures data.",
+        "description": "Financial-market forecasting using gold futures data.",
         "lang": "R",
         "url": "https://github.com/fortunatoantonio/TIME-SERIES"
       },
       {
         "name": "tree",
-        "description": "Machine learning for business classification problems.",
+        "description": "Machine-learning classification models for business problems.",
         "lang": "R",
         "url": "https://github.com/fortunatoantonio/tree"
       },
       {
         "name": "SOLVER-OPTIMIZATION",
-        "description": "Dynamic optimization using Excel Solver — Hotelling model for mining extraction.",
+        "description": "Dynamic optimisation with Excel Solver — applying the Hotelling model to mining extraction.",
         "lang": "Excel",
         "url": "https://github.com/fortunatoantonio/SOLVER-OPTIMIZATION"
       }
@@ -145,26 +145,26 @@
   "certifications": {
     "title": "Certifications",
     "issued_by": "Issued by",
-    "verify": "Verify Credential",
+    "verify": "View Credential",
     "items": [
       {
         "name": "Digital Skills: Digital Marketing",
         "issuer": "Accenture (FutureLearn)",
-        "description": "Digital skills applied to marketing: SEO, social media strategy, digital advertising and performance analytics.",
+        "description": "SEO fundamentals, social-media strategy, digital advertising and performance analytics.",
         "url": "https://www.futurelearn.com/certificates/2i9lrt0",
         "image": "/portfolio/cert-marketing.svg"
       },
       {
         "name": "Digital Skills for Work and Life",
         "issuer": "Accenture (FutureLearn)",
-        "description": "Digital skills for the workplace: productivity, digital collaboration, cloud tools and cybersecurity.",
+        "description": "Workplace productivity, digital collaboration, cloud tools and cybersecurity essentials.",
         "url": "https://www.futurelearn.com/certificates/92yu83u",
         "image": "/portfolio/cert-work.svg"
       },
       {
         "name": "Digital Skills: Social Media",
         "issuer": "Accenture (FutureLearn)",
-        "description": "Strategies and techniques for professional management of corporate social media and personal branding.",
+        "description": "Professional social-media management, content strategy and personal branding.",
         "url": "https://www.futurelearn.com/certificates/92yu83u",
         "image": "/portfolio/cert-social.svg"
       }
@@ -172,7 +172,7 @@
   },
   "languages": {
     "title": "Languages",
-    "eyebrow": "Language skills",
+    "eyebrow": "Language proficiency",
     "items": [
       { "name": "Italian", "level": "Native", "percent": 100 },
       { "name": "English", "level": "Intermediate (B1)", "percent": 55 },
@@ -180,19 +180,19 @@
     ]
   },
   "contact": {
-    "title": "Contact Me",
-    "eyebrow": "Let's start a conversation",
-    "subtitle": "Have an interesting project, a collaboration proposal, or just want to connect? Write to me — I reply within 24 hours.",
+    "title": "Get in Touch",
+    "eyebrow": "Let's connect",
+    "subtitle": "Got a project in mind, a collaboration idea, or just want to say hello? Drop me a line — I usually reply within 24 hours.",
     "name_label": "Name",
     "name_placeholder": "Your name",
     "email_label": "Email",
     "email_placeholder": "your@email.com",
     "message_label": "Message",
-    "message_placeholder": "Write your message here...",
+    "message_placeholder": "Type your message here...",
     "send": "Send Message",
     "sending": "Sending...",
-    "success": "Message sent successfully! I'll get back to you soon.",
-    "error": "Send error. Please try again or contact me directly via email.",
+    "success": "Message sent! I'll get back to you shortly.",
+    "error": "Something went wrong. Please try again or email me directly.",
     "or_reach": "Or reach me directly"
   },
   "footer": {
@@ -201,6 +201,6 @@
     "navigation": "Navigation",
     "connect": "Contacts",
     "role_line": "Analyst · Economist",
-    "location": "Puglia — Italia"
+    "location": "Puglia — Italy"
   }
 }
