@@ -36,9 +36,9 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "I'm Antonio Fortunato, an Analyst with a strong academic background in Economics and Business (110/110 with honors). I combine business expertise with a technology-driven, analytical mindset.",
-    "p2": "I have experience in data analysis, decision-making support, and leveraging technology to improve operational efficiency. During my internship at Diskover Srl, I designed and developed SYRIAS — a web application for time series forecasting based on ARIMA models.",
-    "p3": "I'm driven by digital transformation and the ability to extract value from data to support strategic decisions."
+    "p1": "Economics, finance and innovation are the pillars of my academic and professional path. With a Master's degree in Economics and Business with honors (110/110), I have developed strong business, analytical and quantitative skills, combined with a keen interest in technology to support decision-making.",
+    "p2": "During my internship at Diskover Srl, I collaborated on projects focused on data analysis and the use of digital tools to improve process efficiency and support decision-making activities.",
+    "p3": "My profile is complemented by interpersonal skills, client orientation and problem-solving aptitude — elements I consider essential for turning data and information into concrete value."
   },
   "skills": {
     "title": "Skills",
