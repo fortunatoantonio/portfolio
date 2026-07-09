@@ -99,39 +99,45 @@
     "items": [
       {
         "name": "SYRIAS",
-        "description": "Web application per il forecasting di serie temporali basata su modelli ARIMA, sviluppata con Flask.",
-        "lang": "Python / Flask",
+        "description": "Web application per il forecasting di serie temporali basata su modelli ARIMA.",
+        "lang": "JavaScript",
         "url": "https://github.com/fortunatoantonio/SYRIAS"
       },
       {
-        "name": "Forecast FTSE",
-        "description": "Modello di previsione per l'indice FTSE MIB con analisi di serie temporali e validazione statistica.",
+        "name": "forecast-ftse",
+        "description": "Analisi di serie temporali per futures FTSE MIB.",
         "lang": "Python",
         "url": "https://github.com/fortunatoantonio/forecast-ftse"
       },
       {
-        "name": "Time Series - Statistical Regression",
-        "description": "Analisi statistica avanzata con regressione su serie temporali economico-finanziarie.",
-        "lang": "R",
-        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
-      },
-      {
-        "name": "Presentazione Flask",
-        "description": "Presentazione interattiva del framework Flask per applicazioni web in Python.",
+        "name": "presentazione-flask",
+        "description": "Flask spiegato in HTML: presentazione interattiva del framework.",
         "lang": "HTML",
         "url": "https://github.com/fortunatoantonio/presentazione-flask"
       },
       {
-        "name": "Data Analysis Portfolio",
-        "description": "Raccolta di notebook e script per l'analisi esplorativa dei dati con Python.",
-        "lang": "Python",
-        "url": "https://github.com/fortunatoantonio"
+        "name": "statistical_reg",
+        "description": "Analisi di regressione statistica in R.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
       },
       {
-        "name": "Business Dashboard",
-        "description": "Dashboard per il monitoraggio dei KPI aziendali con visualizzazioni interattive.",
-        "lang": "Python",
-        "url": "https://github.com/fortunatoantonio"
+        "name": "TIME-SERIES",
+        "description": "Previsione dei mercati finanziari — dati futures sull'oro.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES"
+      },
+      {
+        "name": "tree",
+        "description": "Machine learning per problemi di classificazione aziendale.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/tree"
+      },
+      {
+        "name": "SOLVER-OPTIMIZATION",
+        "description": "Ottimizzazione dinamica con Excel Solver — modello di Hotelling per l'estrazione mineraria.",
+        "lang": "Excel",
+        "url": "https://github.com/fortunatoantonio/SOLVER-OPTIMIZATION"
       }
     ]
   },

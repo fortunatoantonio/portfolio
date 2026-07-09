@@ -99,39 +99,45 @@
     "items": [
       {
         "name": "SYRIAS",
-        "description": "Web application for time series forecasting based on ARIMA models, built with Flask.",
-        "lang": "Python / Flask",
+        "description": "Web application for time series forecasting based on ARIMA models.",
+        "lang": "JavaScript",
         "url": "https://github.com/fortunatoantonio/SYRIAS"
       },
       {
-        "name": "Forecast FTSE",
-        "description": "Forecasting model for the FTSE MIB index with time series analysis and statistical validation.",
+        "name": "forecast-ftse",
+        "description": "Time series analysis for FTSE MIB futures.",
         "lang": "Python",
         "url": "https://github.com/fortunatoantonio/forecast-ftse"
       },
       {
-        "name": "Time Series - Statistical Regression",
-        "description": "Advanced statistical analysis with regression on economic-financial time series.",
-        "lang": "R",
-        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
-      },
-      {
-        "name": "Flask Presentation",
-        "description": "Interactive presentation of the Flask framework for Python web applications.",
+        "name": "presentazione-flask",
+        "description": "Flask explained in HTML: interactive framework presentation.",
         "lang": "HTML",
         "url": "https://github.com/fortunatoantonio/presentazione-flask"
       },
       {
-        "name": "Data Analysis Portfolio",
-        "description": "Collection of notebooks and scripts for exploratory data analysis with Python.",
-        "lang": "Python",
-        "url": "https://github.com/fortunatoantonio"
+        "name": "statistical_reg",
+        "description": "Statistical regression analysis in R.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES/tree/statistical_reg"
       },
       {
-        "name": "Business Dashboard",
-        "description": "Dashboard for monitoring business KPIs with interactive visualizations.",
-        "lang": "Python",
-        "url": "https://github.com/fortunatoantonio"
+        "name": "TIME-SERIES",
+        "description": "Financial market forecasting — gold futures data.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/TIME-SERIES"
+      },
+      {
+        "name": "tree",
+        "description": "Machine learning for business classification problems.",
+        "lang": "R",
+        "url": "https://github.com/fortunatoantonio/tree"
+      },
+      {
+        "name": "SOLVER-OPTIMIZATION",
+        "description": "Dynamic optimization using Excel Solver — Hotelling model for mining extraction.",
+        "lang": "Excel",
+        "url": "https://github.com/fortunatoantonio/SOLVER-OPTIMIZATION"
       }
     ]
   },
