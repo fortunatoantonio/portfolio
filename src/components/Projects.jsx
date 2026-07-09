@@ -55,7 +55,7 @@ function GraphicTimeSeries() {
       <circle cx="300" cy="100" r="6" fill="#3b82f6" /><circle cx="300" cy="100" r="12" fill="#3b82f6" opacity="0.15" />
       <circle cx="450" cy="95" r="6" fill="#3b82f6" /><circle cx="450" cy="95" r="12" fill="#3b82f6" opacity="0.15" />
       <circle cx="550" cy="75" r="6" fill="#60a5fa" /><circle cx="550" cy="75" r="12" fill="#60a5fa" opacity="0.15" />
-      <text x="540" y="45" textAnchor="end" fontFamily="monospace" fontSize="14" fill="#60a5fa" opacity="0.6">FTSE MIB</text>
+      <text x="300" y="45" textAnchor="middle" fontFamily="monospace" fontSize="14" fill="#60a5fa" opacity="0.6">FTSE MIB</text>
     </svg>
   )
 }
@@ -79,8 +79,7 @@ function GraphicFlask() {
       <circle cx="340" cy="235" r="4" fill="#fb923c" opacity="0.3" />
       <path d="M450 80 Q460 70 470 80 Q480 90 470 100 Q460 110 470 120 Q480 130 490 120" fill="none" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
       <circle cx="450" cy="80" r="4" fill="#fbbf24" />
-      <text x="120" y="140" fontFamily="monospace" fontSize="16" fill="#94a3b8" opacity="0.3">&lt;html&gt;</text>
-      <text x="440" y="200" fontFamily="monospace" fontSize="16" fill="#94a3b8" opacity="0.3">&lt;/flask&gt;</text>
+      <text x="300" y="45" textAnchor="middle" fontFamily="monospace" fontSize="18" fill="#94a3b8" opacity="0.4">HTML</text>
     </svg>
   )
 }
@@ -203,10 +202,10 @@ function GraphicMining() {
       <circle cx="350" cy="160" r="4" fill="#fbbf24" />
       <text x="300" y="280" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#a16207" opacity="0.7">Time (t)</text>
       <text x="35" y="150" textAnchor="middle" fontFamily="monospace" fontSize="11" fill="#a16207" opacity="0.7" transform="rotate(-90 35 150)">q(t)</text>
-      <rect x="430" y="30" width="18" height="5" rx="2" fill="#eab308" />
-      <text x="455" y="36" fontFamily="monospace" fontSize="9" fill="#d4a574">Extraction</text>
-      <rect x="430" y="45" width="18" height="5" rx="2" fill="#dc2626" opacity="0.7" />
-      <text x="455" y="51" fontFamily="monospace" fontSize="9" fill="#d4a574">Reserve</text>
+      <rect x="240" y="30" width="18" height="5" rx="2" fill="#eab308" />
+      <text x="264" y="36" fontFamily="monospace" fontSize="9" fill="#d4a574">Extraction</text>
+      <rect x="330" y="30" width="18" height="5" rx="2" fill="#dc2626" opacity="0.7" />
+      <text x="354" y="36" fontFamily="monospace" fontSize="9" fill="#d4a574">Reserve</text>
     </svg>
   )
 }
@@ -280,7 +279,7 @@ export default function Projects() {
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('projects.title')} />
         </div>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="mt-10 grid grid-cols-1 min-[480px]:grid-cols-2 gap-5">
           {items.map((project, idx) => (
             <ProjectCard key={project.name} project={project} index={idx} delay={idx * 80} />
           ))}

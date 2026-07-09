@@ -63,7 +63,7 @@ export default function Certifications() {
         <div ref={titleRef} className="fade-up">
           <SectionTitle title={t('certifications.title')} />
         </div>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((cert, idx) => (
             <CertCard key={cert.name} cert={cert} delay={idx * 100} />
           ))}
