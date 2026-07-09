@@ -12,13 +12,13 @@ function CertCard({ cert, delay }) {
       className="fade-up bg-dark-800 border border-dark-600 rounded-sm overflow-hidden hover:border-gold-500/40 transition-colors flex flex-col"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      {/* Banner image */}
+      {/* Banner image — ridotta, mostra tutta la scritta */}
       {cert.image && (
-        <div className="w-full h-28 overflow-hidden bg-dark-700">
+        <div className="w-full h-20 overflow-hidden bg-dark-700 flex items-center justify-center px-3">
           <img
             src={cert.image}
             alt={cert.name}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain"
             loading="lazy"
           />
         </div>

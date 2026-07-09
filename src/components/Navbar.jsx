@@ -46,7 +46,7 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const onResize = () => { if (window.innerWidth >= 768) setMenuOpen(false) }
+    const onResize = () => { if (window.innerWidth >= 1280) setMenuOpen(false) }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
@@ -59,26 +59,26 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
 
-        {/* Nome tutto bianco */}
-        <a href="#hero" className="font-bold text-lg text-white hover:text-gold-400 transition-colors tracking-tight">
+        {/* Nome */}
+        <a href="#hero" className="font-bold text-base xl:text-lg text-white hover:text-gold-400 transition-colors tracking-tight flex-shrink-0">
           Antonio Fortunato
         </a>
 
-        {/* Desktop: nav links */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Desktop: nav links — solo visibili da xl (1280px) in su */}
+        <div className="hidden xl:flex items-center gap-5">
           {NAV_LINKS.map((key) => (
             <a
               key={key}
               href={`#${key}`}
-              className="text-xs font-semibold text-muted-300 hover:text-gold-400 transition-colors uppercase tracking-wider"
+              className="text-[11px] font-semibold text-muted-300 hover:text-gold-400 transition-colors uppercase tracking-wider whitespace-nowrap"
             >
               {t(`nav.${key}`)}
             </a>
           ))}
         </div>
 
-        {/* Desktop: social icons + language toggle */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Desktop: social icons + language toggle — solo da xl */}
+        <div className="hidden xl:flex items-center gap-3 flex-shrink-0">
           {SOCIAL_ICONS.map((s) => (
             <a
               key={s.label}
@@ -95,8 +95,8 @@ export default function Navbar() {
           <LanguageToggle />
         </div>
 
-        {/* Mobile: hamburger */}
-        <div className="flex md:hidden items-center gap-2">
+        {/* Tablet/Mobile: social + lang + hamburger — visibile sotto xl */}
+        <div className="flex xl:hidden items-center gap-2">
           {SOCIAL_ICONS.map((s) => (
             <a
               key={s.label}
@@ -129,9 +129,9 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile dropdown */}
+      {/* Dropdown menu — visibile sotto xl */}
       {menuOpen && (
-        <div className="md:hidden bg-dark-950 border-t border-dark-700 px-4 py-4 flex flex-col gap-3">
+        <div className="xl:hidden bg-dark-950 border-t border-dark-700 px-4 py-4 flex flex-col gap-3">
           {NAV_LINKS.map((key) => (
             <a
               key={key}
