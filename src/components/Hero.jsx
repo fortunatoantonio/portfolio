@@ -87,8 +87,14 @@ export default function Hero() {
           {t('hero.mobile_tagline')}
         </p>
 
-        {/* CTA Scarica CV — in basso a destra su mobile */}
-        <div className="mt-6 flex justify-end">
+        {/* CTA — Scarica CV + Contattami su mobile */}
+        <div className="mt-6 flex justify-end gap-3">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-white text-xs font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+          >
+            {t('hero.cta_contact')}
+          </a>
           <a
             href="/portfolio/antonio_fortunato_cv.pdf"
             download
@@ -118,7 +124,7 @@ export default function Hero() {
             </h1>
 
             {/* Ruoli badge */}
-            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7">
+            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
               <span>{t('hero.role1')}</span>
               <span className="text-white/30 mx-2">|</span>
               <span>{t('hero.role2')}</span>
