@@ -48,12 +48,13 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Dark overlay */}
+      {/* Dark overlay — mobile: uniforme, desktop: gradiente */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.2) 100%)' }}
+        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.92) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.25) 100%)' }}
         aria-hidden="true"
       />
+      <div className="absolute inset-0 bg-black/70 sm:hidden" aria-hidden="true" />
 
       {/* Content — due colonne: testo sinistra, feature cards destra */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20 pb-16">
@@ -68,23 +69,19 @@ export default function Hero() {
               <span className="text-gold-400 block italic">Fortunato</span>
             </h1>
 
-            {/* Ruoli badge — tutto su un rigo */}
-            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
-              <span>Economista</span>
-              <span className="text-white/30 mx-2">|</span>
-              <span>Data Analyst</span>
-              <span className="text-white/30 mx-2">|</span>
-              <span>Quantitative Thinker</span>
+            {/* Ruoli badge — tutto su un rigo, bilingue */}
+            <div className="flex items-center text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] sm:tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-3 sm:px-4 py-2 w-fit mb-7 whitespace-nowrap">
+              <span>{t('hero.role1')}</span>
+              <span className="text-white/30 mx-1.5 sm:mx-2">|</span>
+              <span>{t('hero.role2')}</span>
+              <span className="text-white/30 mx-1.5 sm:mx-2">|</span>
+              <span>{t('hero.role3')}</span>
             </div>
 
-            {/* Bio formattata — parole chiave in grassetto dorato, testo giustificato */}
-            <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10 text-justify">
-              Laureato in <span className="text-white font-semibold">Economia e Commercio</span>,
-              {' '}con esperienza in analisi econometriche,
-              {' '}modellazione <span className="text-white font-semibold">ARIMA</span> e visualizzazione dati.
-              {' '}Combino rigore analitico e competenze quantitative per trasformare i dati in
-              {' '}<span className="text-gold-400 font-semibold italic">decisioni strategiche</span>.
-            </p>
+            {/* Bio formattata — bilingue, giustificata */}
+            <p className="text-muted-300 text-sm sm:text-base leading-relaxed mb-10 text-justify"
+               dangerouslySetInnerHTML={{ __html: t('hero.bio_html') }}
+            />
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
