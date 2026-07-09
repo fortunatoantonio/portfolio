@@ -6,7 +6,7 @@ import { SectionTitle } from './About'
 
 function GraphicSyrias() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="syrias-bg" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#1e293b" />
@@ -38,7 +38,7 @@ function GraphicSyrias() {
 
 function GraphicTimeSeries() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="ftse-bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#0c1222" />
@@ -70,7 +70,7 @@ function GraphicTimeSeries() {
 
 function GraphicFlask() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="flask-bg" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#1a1a2e" />
@@ -99,7 +99,7 @@ function GraphicFlask() {
 
 function GraphicRegression() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="reg-bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#0a1628" />
@@ -135,7 +135,7 @@ function GraphicRegression() {
 
 function GraphicGold() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="gold-bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#1a1508" />
@@ -169,14 +169,14 @@ function GraphicGold() {
       {/* Gold price trend line */}
       <polyline points="84,100 114,110 144,80 174,60 204,70 234,50 264,40 300,35 340,30" fill="none" stroke="#fbbf24" strokeWidth="1.5" opacity="0.5" />
       {/* Label */}
-      <text x="320" y="50" fontFamily="monospace" fontSize="10" fill="#eab308" opacity="0.6">XAU/USD</text>
+      <text x="320" y="50" fontFamily="monospace" fontSize="10" fill="#eab308" opacity="0.6">GOLD</text>
     </svg>
   )
 }
 
 function GraphicTree() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="tree-bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#0a1628" />
@@ -224,7 +224,7 @@ function GraphicTree() {
 
 function GraphicMining() {
   return (
-    <svg viewBox="0 0 400 180" className="w-full h-44 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 400 180" className="w-full h-32 rounded-t-sm" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="mine-bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#1a1508" />

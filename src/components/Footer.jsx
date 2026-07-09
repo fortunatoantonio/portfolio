@@ -75,11 +75,14 @@ export default function Footer() {
 
           {/* ── Left: Contact form ── */}
           <div className="md:col-span-2 text-left">
-            <h2 className="text-3xl sm:text-4xl font-black text-white mb-8">
+            <p className="text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mb-3">
+              {t('contact.eyebrow')}
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-black text-white mb-6">
               {t('contact.title')}
             </h2>
 
-            <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-4">
+            <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-3 max-w-lg">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="f_name" className="block text-xs font-bold text-muted-400 mb-1.5 uppercase tracking-wider">
@@ -105,7 +108,7 @@ export default function Footer() {
                 <label htmlFor="f_message" className="block text-xs font-bold text-muted-400 mb-1.5 uppercase tracking-wider">
                   {t('contact.message_label')}
                 </label>
-                <textarea id="f_message" name="message" rows={4}
+                <textarea id="f_message" name="message" rows={3}
                   placeholder={t('contact.message_placeholder')}
                   className={`resize-none ${errors.message ? inputError : inputNormal}`}
                   aria-invalid={!!errors.message} />
