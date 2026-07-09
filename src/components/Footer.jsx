@@ -141,7 +141,7 @@ export default function Footer() {
           </div>
 
           {/* ── Right: Navigation + Contatti side by side ── */}
-          <div className="text-left md:text-right">
+          <div className="text-center md:text-right">
             <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-0">
               {/* Navigation */}
               <div>
