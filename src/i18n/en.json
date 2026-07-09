@@ -133,21 +133,28 @@
   "certifications": {
     "title": "Certifications",
     "issued_by": "Issued by",
+    "verify": "Verify Credential",
     "items": [
       {
-        "name": "Digital Skills for Marketing",
-        "issuer": "Accenture (MOOC)",
-        "description": "Digital skills applied to marketing: SEO, social media strategy, digital advertising and performance analytics."
+        "name": "Digital Skills: Digital Marketing",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Digital skills applied to marketing: SEO, social media strategy, digital advertising and performance analytics.",
+        "url": "https://www.futurelearn.com/certificates/2i9lrt0",
+        "image": "/portfolio/cert-marketing.webp"
       },
       {
-        "name": "Digital Skills for Work",
-        "issuer": "Accenture (MOOC)",
-        "description": "Digital skills for the workplace: productivity, digital collaboration, cloud tools and cybersecurity."
+        "name": "Digital Skills for Work and Life",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Digital skills for the workplace: productivity, digital collaboration, cloud tools and cybersecurity.",
+        "url": "https://www.futurelearn.com/certificates/92yu83u",
+        "image": "/portfolio/cert-work.webp"
       },
       {
-        "name": "Digital Skills for Social Media",
-        "issuer": "Accenture (MOOC)",
-        "description": "Strategies and techniques for professional management of corporate social media and personal branding."
+        "name": "Digital Skills: Social Media",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Strategies and techniques for professional management of corporate social media and personal branding.",
+        "url": "https://www.futurelearn.com/certificates/92yu83u",
+        "image": "/portfolio/cert-social.webp"
       }
     ]
   },
@@ -156,7 +163,8 @@
     "eyebrow": "Language skills",
     "items": [
       { "name": "Italian", "level": "Native", "percent": 100 },
-      { "name": "English", "level": "Intermediate (B1)", "percent": 55 }
+      { "name": "English", "level": "Intermediate (B1)", "percent": 55 },
+      { "name": "French", "level": "Basic", "percent": 25 }
     ]
   },
   "contact": {

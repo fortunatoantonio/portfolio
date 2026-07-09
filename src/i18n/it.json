@@ -133,21 +133,28 @@
   "certifications": {
     "title": "Certificazioni",
     "issued_by": "Rilasciata da",
+    "verify": "Verifica Credenziale",
     "items": [
       {
-        "name": "Digital Skills for Marketing",
-        "issuer": "Accenture (MOOC)",
-        "description": "Competenze digitali applicate al marketing: SEO, social media strategy, digital advertising e analisi delle performance."
+        "name": "Digital Skills: Digital Marketing",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Competenze digitali applicate al marketing: SEO, social media strategy, digital advertising e analisi delle performance.",
+        "url": "https://www.futurelearn.com/certificates/2i9lrt0",
+        "image": "/portfolio/cert-marketing.webp"
       },
       {
-        "name": "Digital Skills for Work",
-        "issuer": "Accenture (MOOC)",
-        "description": "Competenze digitali per il mondo del lavoro: produttività, collaborazione digitale, strumenti cloud e sicurezza informatica."
+        "name": "Digital Skills for Work and Life",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Competenze digitali per il mondo del lavoro: produttività, collaborazione digitale, strumenti cloud e sicurezza informatica.",
+        "url": "https://www.futurelearn.com/certificates/92yu83u",
+        "image": "/portfolio/cert-work.webp"
       },
       {
-        "name": "Digital Skills for Social Media",
-        "issuer": "Accenture (MOOC)",
-        "description": "Strategie e tecniche per la gestione professionale dei social media aziendali e personal branding."
+        "name": "Digital Skills: Social Media",
+        "issuer": "Accenture (FutureLearn)",
+        "description": "Strategie e tecniche per la gestione professionale dei social media aziendali e personal branding.",
+        "url": "https://www.futurelearn.com/certificates/92yu83u",
+        "image": "/portfolio/cert-social.webp"
       }
     ]
   },
@@ -156,7 +163,8 @@
     "eyebrow": "Competenze linguistiche",
     "items": [
       { "name": "Italiano", "level": "Madrelingua", "percent": 100 },
-      { "name": "Inglese", "level": "Intermedio (B1)", "percent": 55 }
+      { "name": "Inglese", "level": "Intermedio (B1)", "percent": 55 },
+      { "name": "Francese", "level": "Base", "percent": 25 }
     ]
   },
   "contact": {

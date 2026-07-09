@@ -7,6 +7,8 @@ const FLAGS = {
   Italian: '🇮🇹',
   Inglese: '🇬🇧',
   English: '🇬🇧',
+  Francese: '🇫🇷',
+  French: '🇫🇷',
 }
 
 function LanguageCard({ lang }) {
@@ -42,13 +44,9 @@ export default function Languages() {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" aria-hidden="true" />
       <div className="max-w-4xl mx-auto">
         <div ref={ref} className="fade-up">
-          {/* Eyebrow */}
-          <p className="text-gold-500 text-xs font-bold uppercase tracking-[0.2em] mb-2">
-            {t('languages.eyebrow')}
-          </p>
           <SectionTitle title={t('languages.title')} light />
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
             {items.map((lang) => (
               <LanguageCard key={lang.name} lang={lang} />
             ))}

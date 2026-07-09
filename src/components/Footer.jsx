@@ -76,7 +76,8 @@ export default function Footer() {
   const inputError  = `${inputBase} border-red-500 focus:border-red-400 focus:ring-red-500/20`
 
   return (
-    <footer id="contact" className="bg-dark-950 text-white">
+    <footer id="contact" className="relative bg-dark-950 text-white">
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" aria-hidden="true" />
 
       {/* ── Form contatti centrato ── */}
       <div className="max-w-2xl mx-auto px-4 sm:px-8 pt-16 pb-12 text-center">
