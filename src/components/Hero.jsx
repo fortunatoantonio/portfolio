@@ -24,10 +24,10 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* ── Desktop overlay: gradiente laterale (1024px+) ── */}
+      {/* ── Desktop overlay: gradiente laterale (1024px+) — più leggero ── */}
       <div
         className="absolute inset-0 hidden lg:block"
-        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.92) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.25) 100%)' }}
+        style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.15) 100%)' }}
         aria-hidden="true"
       />
 
@@ -80,8 +80,8 @@ export default function Hero() {
       {/* ═══════════════════════════════════════════════════════════
           FULL DESKTOP LAYOUT (1024px+): bio, CTA, feature cards
       ═══════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-28 pb-16 hidden lg:block">
-        <div className="max-w-lg">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:pl-12 xl:pl-16 w-full pt-28 pb-16 hidden lg:block">
+        <div className="max-w-md">
 
           {/* ── Nome, bio, CTA — senza colonna destra ── */}
           <div ref={leftRef} className="fade-up">

@@ -97,16 +97,21 @@ function GraphicRegression() {
       <line x1="60" y1="260" x2="560" y2="260" stroke="#334155" strokeWidth="1" />
       <line x1="60" y1="30" x2="60" y2="260" stroke="#334155" strokeWidth="1" />
       <path d="M70,250 120,230 170,220 220,195 270,180 320,155 370,140 420,115 470,95 520,70 550,55 550,20 520,35 470,55 420,75 370,100 320,115 270,140 220,160 170,180 120,200 70,220 Z" fill="#10b981" opacity="0.05" />
-      <circle cx="90" cy="238" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="140" cy="220" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="190" cy="210" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="235" cy="190" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="285" cy="170" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="330" cy="150" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="380" cy="135" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="430" cy="110" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="480" cy="90" r="6" fill="#14b8a6" opacity="0.7" />
-      <circle cx="530" cy="65" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="90" cy="230" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="130" cy="245" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="170" cy="200" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="215" cy="215" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="260" cy="175" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="300" cy="190" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="340" cy="140" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="380" cy="155" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="420" cy="100" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="460" cy="120" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="500" cy="80" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="540" cy="55" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="150" cy="225" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="350" cy="120" r="6" fill="#14b8a6" opacity="0.7" />
+      <circle cx="480" cy="70" r="6" fill="#14b8a6" opacity="0.7" />
       <line x1="70" y1="248" x2="555" y2="45" stroke="#10b981" strokeWidth="3" strokeDasharray="8 4" />
       <text x="510" y="260" fontFamily="monospace" fontSize="13" fill="#10b981" opacity="0.7">R²=0.94</text>
     </svg>
@@ -163,11 +168,8 @@ function GraphicTree() {
       <line x1="500" y1="175" x2="465" y2="245" stroke="#22c55e" strokeWidth="1.5" opacity="0.4" />
       <line x1="500" y1="175" x2="535" y2="245" stroke="#22c55e" strokeWidth="1.5" opacity="0.4" />
       <circle cx="300" cy="35" r="18" fill="#166534" stroke="#22c55e" strokeWidth="2.5" />
-      <text x="300" y="41" textAnchor="middle" fontSize="12" fill="#86efac" fontWeight="bold">X1</text>
       <circle cx="170" cy="100" r="14" fill="#14532d" stroke="#16a34a" strokeWidth="2" />
-      <text x="170" y="105" textAnchor="middle" fontSize="10" fill="#4ade80">X2</text>
       <circle cx="430" cy="100" r="14" fill="#14532d" stroke="#16a34a" strokeWidth="2" />
-      <text x="430" y="105" textAnchor="middle" fontSize="10" fill="#4ade80">X3</text>
       <circle cx="100" cy="175" r="11" fill="#1a2e1a" stroke="#15803d" strokeWidth="1.5" />
       <circle cx="240" cy="175" r="11" fill="#1a2e1a" stroke="#15803d" strokeWidth="1.5" />
       <circle cx="360" cy="175" r="11" fill="#1a2e1a" stroke="#15803d" strokeWidth="1.5" />

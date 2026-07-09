@@ -59,11 +59,13 @@ export default function Navbar() {
     >
       <nav className="max-w-[1400px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
 
-        {/* Logo — sempre iniziali AF */}
+        {/* Logo — iniziali AF grafiche */}
         <a href="#hero" className="flex-shrink-0 hover:opacity-80 transition-opacity">
-          <span className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-dark-900 font-bold text-xs">
-            AF
-          </span>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" className="block">
+            <rect width="36" height="36" rx="6" fill="#0a0a0a" />
+            <rect x="1.5" y="1.5" width="33" height="33" rx="4.5" fill="none" stroke="#e8c547" strokeWidth="1" />
+            <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle" fontFamily="Georgia, serif" fontSize="15" fontWeight="700" fill="#e8c547" letterSpacing="-0.5">AF</text>
+          </svg>
         </a>
 
         {/* Desktop: nav links — solo xl+ */}
@@ -72,11 +74,11 @@ export default function Navbar() {
             <a
               key={key}
               href={`#${key}`}
-              className="relative text-[11px] font-medium text-gold-200/80 hover:text-gold-400 transition-colors uppercase tracking-[0.18em] whitespace-nowrap group"
+              className="relative text-[11px] font-medium text-white/80 hover:text-white transition-colors uppercase tracking-[0.18em] whitespace-nowrap group"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               {t(`nav.${key}`)}
-              <span className="absolute left-0 -bottom-1 w-0 h-px bg-gold-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
