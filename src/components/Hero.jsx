@@ -41,6 +41,11 @@ export default function Hero() {
           <span className="text-gold-400 block italic text-[3.5rem] sm:text-[4rem]">Fortunato</span>
         </h1>
 
+        {/* Tagline */}
+        <p className="text-muted-300 text-sm leading-relaxed mb-5">
+          {t('hero.mobile_tagline')}
+        </p>
+
         {/* Ruoli — griglia 3 colonne (coerente coi bottoni sotto) */}
         <div className="grid grid-cols-3 gap-2 mb-3">
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
@@ -53,11 +58,6 @@ export default function Hero() {
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200 leading-tight">{t('hero.role3')}</span>
           </div>
         </div>
-
-        {/* Tagline — fra ruoli e bottoni */}
-        <p className="text-muted-300 text-sm leading-relaxed my-3">
-          {t('hero.mobile_tagline')}
-        </p>
 
         {/* CTA — griglia 3 colonne */}
         <div className="grid grid-cols-3 gap-2">
