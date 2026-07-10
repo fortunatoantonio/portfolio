@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTA — griglia 3 colonne */}
+        {/* CTA — griglia 3 colonne, tutti dorati */}
         <div className="grid grid-cols-3 gap-2">
           <a
             href="/portfolio/CVV2.pdf"
@@ -73,13 +73,13 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center py-2.5 text-white text-[10px] sm:text-[11px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-bold rounded-sm hover:bg-gold-400 transition-colors"
           >
             {t('hero.cta_contact')}
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center justify-center py-2.5 text-white text-[10px] sm:text-[11px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-bold rounded-sm hover:bg-gold-400 transition-colors"
           >
             {t('hero.cta_projects')}
           </a>
