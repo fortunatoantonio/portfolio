@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/portfolio/fotosfo.webp')" }}
+        style={{ backgroundImage: "url('/portfolio/sfondoin.webp')" }}
         aria-hidden="true"
       />
 
@@ -42,22 +42,22 @@ export default function Hero() {
           <span className="text-gold-400 block italic text-[3.5rem] sm:text-[4rem]">Fortunato</span>
         </h1>
 
-        {/* Ruoli — compatti, centrati su mobile */}
-        <div className="flex items-center justify-center text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm px-3 py-1.5 w-fit mx-auto sm:mx-0 mb-5 text-center">
+        {/* Ruoli — stessa larghezza dei bottoni sotto */}
+        <div className="flex items-center justify-center text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm py-2 mb-5">
           <span>{t('hero.role1')}</span>
-          <span className="text-white/30 mx-1.5">|</span>
+          <span className="text-white/30 mx-2">|</span>
           <span>{t('hero.role2')}</span>
-          <span className="text-white/30 mx-1.5">|</span>
+          <span className="text-white/30 mx-2">|</span>
           <span>{t('hero.role3')}</span>
         </div>
 
         {/* Tagline breve */}
-        <p className="text-muted-300 text-sm leading-relaxed max-w-sm">
+        <p className="text-muted-300 text-sm leading-relaxed mb-6">
           {t('hero.mobile_tagline')}
         </p>
 
-        {/* CTA — 3 bottoni allineati con i ruoli */}
-        <div className="mt-6 flex items-stretch gap-2">
+        {/* CTA — 3 bottoni stessa larghezza dei ruoli */}
+        <div className="flex items-stretch gap-2">
           <a
             href="/portfolio/CVV2.pdf"
             download
