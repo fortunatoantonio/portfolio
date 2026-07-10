@@ -11,10 +11,11 @@ export default function Hero() {
       className="relative min-h-screen flex items-end lg:items-center overflow-hidden"
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-[length:220%] sm:bg-cover bg-[center_top_20%] sm:bg-[center_top_25%] bg-no-repeat"
-        style={{ backgroundImage: "url('/portfolio/sfondomi.webp')" }}
+      <img
+        src="/portfolio/sfondomi.webp"
+        alt=""
         aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-[center_20%] sm:object-[center_25%]"
       />
 
       {/* ── Clean layout overlay: gradiente dal basso (sotto 1024px) ── */}
