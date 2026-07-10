@@ -114,7 +114,7 @@ export default function Hero() {
               {t('hero.mobile_tagline')}
             </p>
 
-            {/* CTA — 3 bottoni in riga */}
+            {/* CTA — 3 bottoni in riga, tutti dorati */}
             <div className="flex items-center gap-3">
               <a
                 href="/portfolio/CVV2.pdf"
@@ -128,13 +128,13 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
+                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_contact')}
               </a>
               <a
                 href="#projects"
-                className="inline-flex items-center px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
+                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_projects')}
               </a>
