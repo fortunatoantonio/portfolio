@@ -12,7 +12,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-[length:180%] sm:bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-[length:220%] sm:bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/portfolio/sfondomi.webp')" }}
         aria-hidden="true"
       />
