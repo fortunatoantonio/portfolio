@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/portfolio/fotosfo.webp')" }}
+        style={{ backgroundImage: "url('/portfolio/fotosf.webp')" }}
         aria-hidden="true"
       />
 
@@ -32,35 +32,43 @@ export default function Hero() {
       />
 
       {/* ═══════════════════════════════════════════════════════════
-          CLEAN LAYOUT (< 1024px): foto + nome + ruoli + tagline
-          La foto è protagonista — niente confusione
+          MOBILE LAYOUT (< 1024px)
       ═══════════════════════════════════════════════════════════ */}
       <div className="relative z-10 w-full px-5 pb-20 pt-32 lg:hidden">
-        {/* Nome grande elegante */}
+        {/* Nome */}
         <h1 className="text-[3rem] sm:text-[3.5rem] leading-[0.9] font-black mb-4">
           <span className="text-white block">Antonio</span>
           <span className="text-gold-400 block italic text-[3.5rem] sm:text-[4rem]">Fortunato</span>
         </h1>
 
-        {/* Tagline breve */}
+        {/* Tagline */}
         <p className="text-muted-300 text-sm leading-relaxed mb-5">
           {t('hero.mobile_tagline')}
         </p>
 
-        {/* Ruoli — griglia 3 colonne per allineamento perfetto coi bottoni */}
-        <div className="grid grid-cols-3 gap-2 mb-3">
+        {/* Ruoli — riga unica su ≥md, griglia 3 col su mobile */}
+        {/* Versione inline per schermi ≥ md (768px) */}
+        <div className="hidden md:flex items-center text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm py-2 justify-center mb-3">
+          <span>{t('hero.role1')}</span>
+          <span className="text-white/30 mx-3">|</span>
+          <span>{t('hero.role2')}</span>
+          <span className="text-white/30 mx-3">|</span>
+          <span>{t('hero.role3')}</span>
+        </div>
+        {/* Versione griglia per mobile < md */}
+        <div className="grid grid-cols-3 gap-2 mb-3 md:hidden">
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
           </div>
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
           </div>
-          <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role3')}</span>
+          <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm text-center">
+            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200 leading-tight">{t('hero.role3')}</span>
           </div>
         </div>
 
-        {/* CTA — griglia 3 colonne identica ai ruoli */}
+        {/* CTA — griglia 3 colonne */}
         <div className="grid grid-cols-3 gap-2">
           <a
             href="/portfolio/CVV2.pdf"
@@ -88,12 +96,11 @@ export default function Hero() {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════
-          FULL DESKTOP LAYOUT (1024px+): bio, CTA, feature cards
+          DESKTOP LAYOUT (1024px+)
       ═══════════════════════════════════════════════════════════ */}
       <div className="relative z-10 w-full pl-8 sm:pl-12 lg:pl-16 xl:pl-20 pr-4 pt-28 pb-16 hidden lg:block">
-        <div className="max-w-md">
+        <div className="max-w-lg">
 
-          {/* ── Nome, bio, CTA ── */}
           <div ref={leftRef} className="fade-up">
 
             {/* Nome */}
@@ -102,30 +109,26 @@ export default function Hero() {
               <span className="text-gold-400 block italic">Fortunato</span>
             </h1>
 
-            {/* Ruoli badge — griglia 3 colonne */}
-            <div className="grid grid-cols-3 gap-2 mb-7">
-              <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-                <span className="text-xs font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
-              </div>
-              <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-                <span className="text-xs font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
-              </div>
-              <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-                <span className="text-xs font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role3')}</span>
-              </div>
+            {/* Ruoli badge — riga unica con separatori */}
+            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
+              <span>{t('hero.role1')}</span>
+              <span className="text-white/30 mx-3">|</span>
+              <span>{t('hero.role2')}</span>
+              <span className="text-white/30 mx-3">|</span>
+              <span>{t('hero.role3')}</span>
             </div>
 
-            {/* Bio — tagline pulita */}
+            {/* Bio */}
             <p className="text-muted-300 text-base leading-relaxed mb-10">
               {t('hero.mobile_tagline')}
             </p>
 
-            {/* CTA — griglia 3 colonne identica ai ruoli */}
-            <div className="grid grid-cols-3 gap-2">
+            {/* CTA — 3 bottoni in riga */}
+            <div className="flex items-center gap-3">
               <a
                 href="/portfolio/CVV2.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
@@ -134,13 +137,13 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+                className="inline-flex items-center px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_contact')}
               </a>
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+                className="inline-flex items-center px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_projects')}
               </a>
