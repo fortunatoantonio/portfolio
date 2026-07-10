@@ -8,11 +8,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-end lg:items-center overflow-hidden"
+      className="relative min-h-screen sm:h-[85vh] sm:min-h-0 lg:min-h-screen lg:h-auto flex items-end lg:items-center overflow-hidden"
     >
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-[length:250%] sm:bg-cover bg-[center_top_15%] sm:bg-[center_top_25%] bg-no-repeat"
+        className="absolute inset-0 bg-[length:250%] sm:bg-cover bg-[center_top_15%] sm:bg-top bg-no-repeat"
         style={{ backgroundImage: "url('/portfolio/sfondomi.webp')" }}
         aria-hidden="true"
       />
