@@ -49,13 +49,13 @@ export default function Hero() {
         {/* Ruoli — griglia 3 colonne (coerente coi bottoni sotto) */}
         <div className="grid grid-cols-3 gap-2 mb-3">
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
+            <span className="text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] text-muted-200">{t('hero.role1')}</span>
           </div>
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
+            <span className="text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] text-muted-200">{t('hero.role2')}</span>
           </div>
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm text-center">
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200 leading-tight">{t('hero.role3')}</span>
+            <span className="text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] text-muted-200 leading-tight">{t('hero.role3')}</span>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export default function Hero() {
           <a
             href="/portfolio/CVV2.pdf"
             download
-            className="inline-flex items-center justify-center gap-1.5 py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-bold rounded-sm hover:bg-gold-400 transition-colors"
+            className="inline-flex items-center justify-center gap-1.5 py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] rounded-sm hover:bg-gold-400 transition-colors"
           >
             <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
@@ -73,13 +73,13 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-bold rounded-sm hover:bg-gold-400 transition-colors"
+            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] rounded-sm hover:bg-gold-400 transition-colors"
           >
             {t('hero.cta_contact')}
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-bold rounded-sm hover:bg-gold-400 transition-colors"
+            className="inline-flex items-center justify-center py-2.5 bg-gold-500 text-dark-900 text-[10px] sm:text-[11px] font-serif uppercase tracking-[0.08em] rounded-sm hover:bg-gold-400 transition-colors"
           >
             {t('hero.cta_projects')}
           </a>
@@ -101,7 +101,7 @@ export default function Hero() {
             </h1>
 
             {/* Ruoli badge — riga unica con separatori */}
-            <div className="flex items-center text-xs font-bold uppercase tracking-[0.15em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
+            <div className="flex items-center text-sm font-serif uppercase tracking-[0.1em] text-muted-200 border border-white/20 rounded-sm px-4 py-2 w-fit mb-7 whitespace-nowrap">
               <span>{t('hero.role1')}</span>
               <span className="text-white/30 mx-3">|</span>
               <span>{t('hero.role2')}</span>
@@ -119,7 +119,7 @@ export default function Hero() {
               <a
                 href="/portfolio/CVV2.pdf"
                 download
-                className="inline-flex items-center gap-2 px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-gold-500 text-dark-900 text-sm font-serif uppercase tracking-[0.1em] rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
@@ -128,13 +128,13 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
+                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-serif uppercase tracking-[0.1em] rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_contact')}
               </a>
               <a
                 href="#projects"
-                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
+                className="inline-flex items-center px-5 py-3 bg-gold-500 text-dark-900 text-sm font-serif uppercase tracking-[0.1em] rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_projects')}
               </a>
