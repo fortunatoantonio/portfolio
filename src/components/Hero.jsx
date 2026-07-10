@@ -15,8 +15,7 @@ export default function Hero() {
         src="/portfolio/sfondomi.webp"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: 'center 25%' }}
+        className="absolute inset-0 w-full h-full object-cover object-[center_20%] sm:object-[center_25%]"
       />
 
       {/* ── Clean layout overlay: gradiente dal basso (sotto 1024px) ── */}
