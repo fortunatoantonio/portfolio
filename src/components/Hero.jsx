@@ -56,27 +56,27 @@ export default function Hero() {
           {t('hero.mobile_tagline')}
         </p>
 
-        {/* CTA — 3 bottoni in linea con i ruoli */}
-        <div className="mt-6 flex items-center gap-2.5">
+        {/* CTA — 3 bottoni allineati con i ruoli */}
+        <div className="mt-6 flex items-stretch gap-2">
           <a
             href="/portfolio/CVV2.pdf"
             download
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-gold-500 text-dark-900 text-[10px] font-bold rounded-sm hover:bg-gold-400 transition-colors flex-1"
+            className="inline-flex items-center justify-center gap-1.5 py-2.5 bg-gold-500 text-dark-900 text-[10px] font-bold rounded-sm hover:bg-gold-400 transition-colors flex-1 whitespace-nowrap"
           >
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
             </svg>
             {t('hero.cta_cv')}
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-white text-[10px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors flex-1"
+            className="inline-flex items-center justify-center py-2.5 text-white text-[10px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors flex-1 whitespace-nowrap"
           >
             {t('hero.cta_contact')}
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-white text-[10px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors flex-1"
+            className="inline-flex items-center justify-center py-2.5 text-white text-[10px] font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors flex-1 whitespace-nowrap"
           >
             {t('hero.cta_projects')}
           </a>
@@ -117,22 +117,22 @@ export default function Hero() {
               <a
                 href="/portfolio/CVV2.pdf"
                 download
-                className="inline-flex items-center gap-2 px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-gold-500 text-dark-900 text-sm font-bold rounded-sm hover:bg-gold-400 transition-colors whitespace-nowrap"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
                 </svg>
                 {t('hero.cta_cv')}
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_contact')}
               </a>
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-bold rounded-sm border border-white/30 hover:border-gold-400 hover:text-gold-400 transition-colors whitespace-nowrap"
               >
                 {t('hero.cta_projects')}
               </a>
