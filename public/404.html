@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Antonio Fortunato — Portfolio</title>
+    <title>Portfolio Website</title>
     <script>
       // SPA redirect for GitHub Pages
-      // Stores the path and redirects to index.html
-      const path = window.location.pathname;
-      const repo = '/portfolio';
-      if (path.startsWith(repo)) {
-        const hash = window.location.hash;
+      // Only redirect HTML routes, not static assets
+      var path = window.location.pathname;
+      var repo = '/portfolio';
+      var isFile = /\.\w+$/.test(path);
+      if (!isFile && path.startsWith(repo)) {
+        var hash = window.location.hash;
         sessionStorage.setItem('spa-redirect', path + hash);
         window.location.replace(repo + '/');
       }
