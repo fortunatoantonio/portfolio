@@ -12,7 +12,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-[length:220%] sm:bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-[length:190%] sm:bg-cover bg-[center_top_20%] sm:bg-[center_top_30%] bg-no-repeat"
         style={{ backgroundImage: "url('/portfolio/sfondomi.webp')" }}
         aria-hidden="true"
       />
@@ -20,7 +20,7 @@ export default function Hero() {
       {/* ── Clean layout overlay: gradiente dal basso (sotto 1024px) ── */}
       <div
         className="absolute inset-0 lg:hidden"
-        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 35%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.95) 100%)' }}
+        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 75%, rgba(0,0,0,1) 100%)' }}
         aria-hidden="true"
       />
 
