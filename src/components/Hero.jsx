@@ -46,25 +46,16 @@ export default function Hero() {
           {t('hero.mobile_tagline')}
         </p>
 
-        {/* Ruoli — riga unica su ≥md, griglia 3 col su mobile */}
-        {/* Versione inline per schermi ≥ md (768px) */}
-        <div className="hidden md:flex items-center text-[11px] font-bold uppercase tracking-[0.14em] text-muted-200 border border-white/20 rounded-sm py-2 justify-center mb-3">
-          <span>{t('hero.role1')}</span>
-          <span className="text-white/30 mx-3">|</span>
-          <span>{t('hero.role2')}</span>
-          <span className="text-white/30 mx-3">|</span>
-          <span>{t('hero.role3')}</span>
-        </div>
-        {/* Versione griglia per mobile < md */}
-        <div className="grid grid-cols-3 gap-2 mb-3 md:hidden">
+        {/* Ruoli — griglia 3 colonne (coerente coi bottoni sotto) */}
+        <div className="grid grid-cols-3 gap-2 mb-3">
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role1')}</span>
           </div>
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm">
-            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200">{t('hero.role2')}</span>
           </div>
           <div className="flex items-center justify-center py-2 border border-white/20 rounded-sm text-center">
-            <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-200 leading-tight">{t('hero.role3')}</span>
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.12em] text-muted-200 leading-tight">{t('hero.role3')}</span>
           </div>
         </div>
 
